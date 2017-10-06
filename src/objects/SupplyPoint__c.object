@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Supply_Point_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Information displayed on a bill to advise the customers of the meter location. This may differ from the location field as customers tend to advise of this info themselves for their understanding. Not used to guide meter readers.</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DeviceLocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Device Location</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ExcludeFromEstimation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Exclude From Estimation</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Geolocation__c</fullName>
+        <displayLocationInDecimal>false</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Geolocation</label>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Industry__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Other Retails Shops</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Wholesaler/Merchants</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unpsecified Dist, Retail, Wholesale, Repairs, Hotels, Catering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Taxi/coach</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Storage and Warehousing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Travel Agents/Tours</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Postal services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bus/rail Depots</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Air/Sea Terminals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Haulage Companies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unspecified Transport and Communications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Property/Other Rental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business sevices</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle/Equipment Hire</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer related services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unspecified Banking, Finance,Ins, Bus Serv, Leasing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Television/Radio/Other media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Car Washes/Valets</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cleaning Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hair/Beauty Salon</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Play Groups/Nurseries/Pres School</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vets</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Funeral Parlours/Crematoria</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Further Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Libaries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Museums/Galleries/Nat.Trust/History Park</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Churches&amp;Halls/Convents/Graveyards</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hospitals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Army Bases/Camps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Residential Homes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fire Authority Premises</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Law &amp; Order Premises</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dept of Agric&amp;Rural</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dept of Culture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dept of Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dept of Enterprise</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dept of Environment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dept of Finance and Personnel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DHSS &amp; Public Safety</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dept for Employment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dept for Reg D&apos;ment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dept of Social D&apos;mnt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Med Surgeries/Clinic/Dentists</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Toliets</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>District Council Premises</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off. of 1st Minister</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non Dept Political</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sports/Social Club</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Activity Related Centre</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leisure Complexes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Arts/Entertainment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outdoor Attractions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unspecified Other Activity incl Public Admin, Defence</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <referenceTo>Location__c</referenceTo>
+        <relationshipLabel>Supply Points</relationshipLabel>
+        <relationshipName>SupplyPoints</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Measured__c</fullName>
+        <externalId>false</externalId>
+        <label>Measured</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>true</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PartySupply__c</fullName>
+        <description>Used for Operational / Disconnection Information</description>
+        <externalId>false</externalId>
+        <label>Party Supply</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Able to Disconnect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Joint Supply</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unable to Disconnect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ReadFrequencyDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Read Frequency Date</label>
+        <picklist>
+            <controllingField>ReadFrequency__c</controllingField>
+            <picklistValues>
+                <fullName>Jan Apr Jul Oct</fullName>
+                <default>false</default>
+                <controllingFieldValues>Quarterly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feb May Aug Nov</fullName>
+                <default>false</default>
+                <controllingFieldValues>Quarterly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mar Jun Sept Dec</fullName>
+                <default>false</default>
+                <controllingFieldValues>Quarterly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jan Jul</fullName>
+                <default>false</default>
+                <controllingFieldValues>Half Yearly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feb Aug</fullName>
+                <default>false</default>
+                <controllingFieldValues>Half Yearly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mar Sept</fullName>
+                <default>false</default>
+                <controllingFieldValues>Half Yearly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apr Oct</fullName>
+                <default>false</default>
+                <controllingFieldValues>Half Yearly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>May Nov</fullName>
+                <default>false</default>
+                <controllingFieldValues>Half Yearly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jun Dec</fullName>
+                <default>false</default>
+                <controllingFieldValues>Half Yearly</controllingFieldValues>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ReadFrequency__c</fullName>
+        <description>Read Frequency will vary with clients so will need updating at implementation.</description>
+        <externalId>false</externalId>
+        <label>Read Frequency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Half Yearly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Four Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unmeasured</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SpecialInstructions__c</fullName>
+        <description>Used to advice readers of any dangers when reading the meter. For example angry dog.</description>
+        <externalId>false</externalId>
+        <label>Special Instructions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TotalActiveSupplyPointDevice__c</fullName>
+        <description>Number of Total active Supply Point Device</description>
+        <externalId>false</externalId>
+        <label># Total Active Supply Point Device</label>
+        <summaryFilterItems>
+            <field>SupplyPointDevice__c.ActiveBackground__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SupplyPointDevice__c.SupplyPoint__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>TouchpadLatitude__c</fullName>
+        <externalId>false</externalId>
+        <label>Touchpad Latitude</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TouchpadLocation__c</fullName>
+        <description>Defines the location of the touchpad for reading the device</description>
+        <externalId>false</externalId>
+        <label>Touchpad Location</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TouchpadLongitude__c</fullName>
+        <externalId>false</externalId>
+        <label>Touchpad Longitude</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TouchpadSerialNo__c</fullName>
+        <externalId>false</externalId>
+        <label>Touchpad Serial No.</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Supply Point</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Location__c</columns>
+        <columns>Measured__c</columns>
+        <columns>ReadFrequency__c</columns>
+        <columns>Industry__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SP-{000000000}</displayFormat>
+        <label>Supply Point Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Supply Points</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>MeasuredSupplyPoint</fullName>
+        <active>true</active>
+        <description>If Measured = True, then Read Frequency must not be Unmeasured</description>
+        <errorConditionFormula>AND ( ISPICKVAL(Measured__c, &apos;yes&apos;), ISPICKVAL( ReadFrequency__c , &apos;Unmeasured&apos;) )</errorConditionFormula>
+        <errorMessage>Read Frequency must not be Unmeasured If Measured is yes.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SupplyPointCannotbeUnmeasured</fullName>
+        <active>true</active>
+        <description>If the user needs to add an active Supply Point Device to an Unmeasured Supply Point, he/she needs to update the linked Supply Point to Measured first.</description>
+        <errorConditionFormula>ISPICKVAL(Measured__c ,&quot;No&quot;) &amp;&amp;  (TotalActiveSupplyPointDevice__c  &lt;&gt; 0)</errorConditionFormula>
+        <errorMessage>Please update the related Supply Point to &quot;Measured&quot; first before adding a new active Supply Point Device.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>UnmeasuredSupplyPoint</fullName>
+        <active>true</active>
+        <description>If Measured = False, then Read Frequency must be Unmeasured.</description>
+        <errorConditionFormula>AND ( ISPICKVAL(Measured__c, &apos;No&apos;),  NOT(ISPICKVAL( ReadFrequency__c , &apos;Unmeasured&apos;)) )</errorConditionFormula>
+        <errorMessage>Read Frequency must be Unmeasured if measured is selected as No.</errorMessage>
+    </validationRules>
+</CustomObject>

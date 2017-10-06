@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Available Bundle</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Available Bundles</value>
+    </caseValues>
+    <fields>
+        <label><!-- Available Service --></label>
+        <name>AvailableService__c</name>
+        <relationshipLabel><!-- Available Bundles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bundle --></label>
+        <name>Bundle__c</name>
+        <relationshipLabel><!-- Available Bundles --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

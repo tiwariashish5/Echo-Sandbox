@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Reading_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>ActualDeviceReading__c</fullName>
+        <description>Device Reading</description>
+        <externalId>false</externalId>
+        <label>Actual Device Reading</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DeviceReference__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Device Reference</label>
+        <referenceTo>Device__c</referenceTo>
+        <relationshipLabel>Readings</relationshipLabel>
+        <relationshipName>Readings</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GrossConsumption__c</fullName>
+        <description>Trigger to calculate &quot;Reading - previous Reading &quot;</description>
+        <externalId>false</externalId>
+        <label>Gross Consumption</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReaderRemarks__c</fullName>
+        <externalId>false</externalId>
+        <label>Reader Remarks</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reader__c</fullName>
+        <description>Assumption this information arrives from the 3rd party reading management software</description>
+        <externalId>false</externalId>
+        <label>Reader</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ReadingDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Reading Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ReadingType__c</fullName>
+        <description>Different functionality maybe invoked based on read type e.g. meter exchange reads, tripped meter etc.
+Also need to consider read types are flagged as estimate/actual/ad-hoc</description>
+        <externalId>false</externalId>
+        <label>Reading Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Company Reading</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Reading</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cyclic Reading</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estimate Final</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estimate Initial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reading__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(DeviceReference__r.DeviceType__r.UnitOfMeasure__c,&apos;Imperial - UK Gallons&apos;), 
+ IF(ISBLANK(DeviceReference__r.DeviceType__r.Multiplier__c),(ActualDeviceReading__c / 1000)*0.22,(ActualDeviceReading__c / 1000)*0.22*DeviceReference__r.DeviceType__r.Multiplier__c)
+ ,IF(ISBLANK(DeviceReference__r.DeviceType__r.Multiplier__c),ActualDeviceReading__c,ActualDeviceReading__c *DeviceReference__r.DeviceType__r.Multiplier__c))</formula>
+        <label>Reading</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Reading</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>R-{000000000}</displayFormat>
+        <label>Reading Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Readings</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>ReadingMustNotBeGreaterThanDeviceDigits</fullName>
+        <active>true</active>
+        <description>Reading cannot be greater than Digits on the related Device record</description>
+        <errorConditionFormula>LEN(TEXT(ActualDeviceReading__c))&gt; DeviceReference__r.Digit__c</errorConditionFormula>
+        <errorMessage>Actual Device Reading can not be greater than the number of Digits on Device.</errorMessage>
+    </validationRules>
+</CustomObject>

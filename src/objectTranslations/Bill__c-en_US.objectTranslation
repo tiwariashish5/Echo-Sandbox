@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bill</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bills</value>
+    </caseValues>
+    <fields>
+        <label><!-- Bill Calculation --></label>
+        <name>BillCalculation__c</name>
+        <relationshipLabel><!-- Bills --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bill Date --></label>
+        <name>BillDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billed Amount --></label>
+        <name>BilledAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Group --></label>
+        <name>ContractGroup__c</name>
+        <relationshipLabel><!-- Bills --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Number --></label>
+        <name>ContractNumber__c</name>
+        <relationshipLabel><!-- Bills --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>CustomerNumber__c</name>
+        <relationshipLabel><!-- Bills --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Heroku Postgres Id --></label>
+        <name>HerokuPostgresId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated --></label>
+        <name>Migrated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Due --></label>
+        <name>TotalDue__c</name>
+    </fields>
+    <layouts>
+        <layout>Bill/Statement/Credit Note Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

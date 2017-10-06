@@ -1,0 +1,64 @@
+<!-- 
+/******************************************************************************
+@author    		Accenture: Patrick Dixon
+@date      		06 Sep 2017
+@description 	Component to implement bill calculation from a button
+				requires contract Id from parent component/page
+*******************************************************************************/
+ -->
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" 
+		extensible="true" access="global" 
+		controller="BlAp_CalculateBillComponentCtrlr">
+
+	<!-- component attributes -->
+	<aura:attribute name="contract" type="Object" />
+    <aura:attribute name="error" type="String" default=""/>
+
+	<force:recordData aura:id="recordLoader" 
+					recordId="{!v.recordId}" 
+					fields="Name, LastBillCalculationDate__c" 
+					targetRecord="{!v.contract}" 
+					targetFields="{!v.contract}" 
+					targetError="{!v.error}"
+					mode="VIEW"  />
+	
+	<aura:attribute name="today" type="Date" access="private"/>
+    <aura:attribute name="calloutInProgress" type="Boolean"  access="public" default="false"/>
+    <aura:attribute name="response" type="String"  access="private" default=""/>
+
+	<aura:attribute name="billId" type="Id" access="private"/>
+	<aura:attribute name="billCalculation" type="BillCalculation__c" access="private"/>
+	<aura:attribute name="pollerId" type="String" access="public"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.initialise}"/>
+    
+	<!-- HTML markup -->
+	<c:GlAp_SpinnerComponent aura:id="spinner"/>
+
+	<div class="container">
+		<!-- errors -->
+		<aura:if isTrue="{!not(empty(v.error))}">
+			<div class="recordError">
+				<ui:message title="Error" severity="error" closable="true">
+					{!v.error}
+				</ui:message>
+			</div>
+		</aura:if>
+
+	    <aura:if isTrue="{!!empty(v.response)}">
+	    	<lightning:textarea name="response" value="{!v.response}" label="DEBUG: Billing calculation response:"/>
+		</aura:if> 
+
+    	<aura:if isTrue="{!v.contract.LastBillCalculationDate__c == null || v.contract.LastBillCalculationDate__c &lt; v.today}">
+			<aura:if isTrue="{!!v.calloutInProgress}">
+				<lightning:button variant="neutral" label="Calculate Bill" onclick="{!c.calculateBill}" />
+		    	<aura:set attribute="else">
+	 				Please wait whilst we calculate your bill
+		    	</aura:set>
+			</aura:if>
+
+		</aura:if>
+
+	</div>
+
+</aura:component>

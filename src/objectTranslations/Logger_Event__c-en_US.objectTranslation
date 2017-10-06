@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Logger Event</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Logger Event</value>
+    </caseValues>
+    <fields>
+        <help><!-- flag will true to capture debug log --></help>
+        <label><!-- Debug Log --></label>
+        <name>Debug_Log__c</name>
+    </fields>
+    <fields>
+        <help><!-- flag will true to capture exception log --></help>
+        <label><!-- Exception Log --></label>
+        <name>Exception_Log__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

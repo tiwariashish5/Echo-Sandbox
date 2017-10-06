@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Device</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Devices</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Reference Helper --></label>
+        <name>DeviceReferenceHelper__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Reference --></label>
+        <name>DeviceReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Type --></label>
+        <name>DeviceType__c</name>
+        <relationshipLabel><!-- Devices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Device Validation --></label>
+        <name>DeviceValidation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Digits --></label>
+        <name>Digit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maximum Reading --></label>
+        <name>MaximumReading__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Active Supply Point Device --></label>
+        <name>NumberOfActiveSupplyPointDevice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Serial No. --></label>
+        <name>SerialNo__c</name>
+    </fields>
+    <layouts>
+        <layout>Device Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Digit can&apos;t be updated once entered. --></errorMessage>
+        <name>DeviceDigitMustNotBeChanged</name>
+    </validationRules>
+</CustomObjectTranslation>

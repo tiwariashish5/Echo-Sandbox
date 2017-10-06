@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Supply Point</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Supply Points</value>
+    </caseValues>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Location --></label>
+        <name>DeviceLocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude From Estimation --></label>
+        <name>ExcludeFromEstimation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geolocation --></label>
+        <name>Geolocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Industry__c</name>
+        <picklistValues>
+            <masterLabel>Activity Related Centre</masterLabel>
+            <translation><!-- Activity Related Centre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Air/Sea Terminals</masterLabel>
+            <translation><!-- Air/Sea Terminals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Army Bases/Camps</masterLabel>
+            <translation><!-- Army Bases/Camps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arts/Entertainment</masterLabel>
+            <translation><!-- Arts/Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bus/rail Depots</masterLabel>
+            <translation><!-- Bus/rail Depots --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business sevices</masterLabel>
+            <translation><!-- Business sevices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Washes/Valets</masterLabel>
+            <translation><!-- Car Washes/Valets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Churches&amp;Halls/Convents/Graveyards</masterLabel>
+            <translation><!-- Churches&amp;Halls/Convents/Graveyards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleaning Services</masterLabel>
+            <translation><!-- Cleaning Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer related services</masterLabel>
+            <translation><!-- Computer related services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHSS &amp; Public Safety</masterLabel>
+            <translation><!-- DHSS &amp; Public Safety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dept for Employment</masterLabel>
+            <translation><!-- Dept for Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dept for Reg D&apos;ment</masterLabel>
+            <translation><!-- Dept for Reg D&apos;ment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dept of Agric&amp;Rural</masterLabel>
+            <translation><!-- Dept of Agric&amp;Rural --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dept of Culture</masterLabel>
+            <translation><!-- Dept of Culture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dept of Education</masterLabel>
+            <translation><!-- Dept of Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dept of Enterprise</masterLabel>
+            <translation><!-- Dept of Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dept of Environment</masterLabel>
+            <translation><!-- Dept of Environment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dept of Finance and Personnel</masterLabel>
+            <translation><!-- Dept of Finance and Personnel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dept of Social D&apos;mnt</masterLabel>
+            <translation><!-- Dept of Social D&apos;mnt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District Council Premises</masterLabel>
+            <translation><!-- District Council Premises --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fire Authority Premises</masterLabel>
+            <translation><!-- Fire Authority Premises --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funeral Parlours/Crematoria</masterLabel>
+            <translation><!-- Funeral Parlours/Crematoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Further Education</masterLabel>
+            <translation><!-- Further Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair/Beauty Salon</masterLabel>
+            <translation><!-- Hair/Beauty Salon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Haulage Companies</masterLabel>
+            <translation><!-- Haulage Companies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospitals</masterLabel>
+            <translation><!-- Hospitals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law &amp; Order Premises</masterLabel>
+            <translation><!-- Law &amp; Order Premises --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leisure Complexes</masterLabel>
+            <translation><!-- Leisure Complexes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libaries</masterLabel>
+            <translation><!-- Libaries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Med Surgeries/Clinic/Dentists</masterLabel>
+            <translation><!-- Med Surgeries/Clinic/Dentists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Museums/Galleries/Nat.Trust/History Park</masterLabel>
+            <translation><!-- Museums/Galleries/Nat.Trust/History Park --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non Dept Political</masterLabel>
+            <translation><!-- Non Dept Political --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off. of 1st Minister</masterLabel>
+            <translation><!-- Off. of 1st Minister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Retails Shops</masterLabel>
+            <translation><!-- Other Retails Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Wholesaler/Merchants</masterLabel>
+            <translation><!-- Other Wholesaler/Merchants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outdoor Attractions</masterLabel>
+            <translation><!-- Outdoor Attractions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Play Groups/Nurseries/Pres School</masterLabel>
+            <translation><!-- Play Groups/Nurseries/Pres School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Postal services</masterLabel>
+            <translation><!-- Postal services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Property/Other Rental</masterLabel>
+            <translation><!-- Property/Other Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Toliets</masterLabel>
+            <translation><!-- Public Toliets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Residential Homes</masterLabel>
+            <translation><!-- Residential Homes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Education</masterLabel>
+            <translation><!-- School Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports/Social Club</masterLabel>
+            <translation><!-- Sports/Social Club --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Storage and Warehousing</masterLabel>
+            <translation><!-- Storage and Warehousing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxi/coach</masterLabel>
+            <translation><!-- Taxi/coach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telecommunications</masterLabel>
+            <translation><!-- Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Television/Radio/Other media</masterLabel>
+            <translation><!-- Television/Radio/Other media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel Agents/Tours</masterLabel>
+            <translation><!-- Travel Agents/Tours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unpsecified Dist, Retail, Wholesale, Repairs, Hotels, Catering</masterLabel>
+            <translation><!-- Unpsecified Dist, Retail, Wholesale, Repairs, Hotels, Catering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unspecified Banking, Finance,Ins, Bus Serv, Leasing</masterLabel>
+            <translation><!-- Unspecified Banking, Finance,Ins, Bus Serv, Leasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unspecified Other Activity incl Public Admin, Defence</masterLabel>
+            <translation><!-- Unspecified Other Activity incl Public Admin, Defence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unspecified Transport and Communications</masterLabel>
+            <translation><!-- Unspecified Transport and Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vehicle/Equipment Hire</masterLabel>
+            <translation><!-- Vehicle/Equipment Hire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vets</masterLabel>
+            <translation><!-- Vets --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <relationshipLabel><!-- Supply Points --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Measured --></label>
+        <name>Measured__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Party Supply --></label>
+        <name>PartySupply__c</name>
+        <picklistValues>
+            <masterLabel>Able to Disconnect</masterLabel>
+            <translation><!-- Able to Disconnect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joint Supply</masterLabel>
+            <translation><!-- Joint Supply --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unable to Disconnect</masterLabel>
+            <translation><!-- Unable to Disconnect --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Read Frequency Date --></label>
+        <name>ReadFrequencyDate__c</name>
+        <picklistValues>
+            <masterLabel>Apr Oct</masterLabel>
+            <translation><!-- Apr Oct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feb Aug</masterLabel>
+            <translation><!-- Feb Aug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feb May Aug Nov</masterLabel>
+            <translation><!-- Feb May Aug Nov --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jan Apr Jul Oct</masterLabel>
+            <translation><!-- Jan Apr Jul Oct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jan Jul</masterLabel>
+            <translation><!-- Jan Jul --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jun Dec</masterLabel>
+            <translation><!-- Jun Dec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mar Jun Sept Dec</masterLabel>
+            <translation><!-- Mar Jun Sept Dec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mar Sept</masterLabel>
+            <translation><!-- Mar Sept --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>May Nov</masterLabel>
+            <translation><!-- May Nov --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Read Frequency --></label>
+        <name>ReadFrequency__c</name>
+        <picklistValues>
+            <masterLabel>Annual</masterLabel>
+            <translation><!-- Annual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Four Weekly</masterLabel>
+            <translation><!-- Four Weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half Yearly</masterLabel>
+            <translation><!-- Half Yearly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unmeasured</masterLabel>
+            <translation><!-- Unmeasured --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Special Instructions --></label>
+        <name>SpecialInstructions__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Total Active Supply Point Device --></label>
+        <name>TotalActiveSupplyPointDevice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touchpad Latitude --></label>
+        <name>TouchpadLatitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touchpad Location --></label>
+        <name>TouchpadLocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touchpad Longitude --></label>
+        <name>TouchpadLongitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touchpad Serial No. --></label>
+        <name>TouchpadSerialNo__c</name>
+    </fields>
+    <layouts>
+        <layout>Supply Point Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Touchpad Information --></label>
+            <section>Touchpad Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Read Frequency must not be Unmeasured If Measured is yes. --></errorMessage>
+        <name>MeasuredSupplyPoint</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please update the related Supply Point to &quot;Measured&quot; first before adding a new active Supply Point Device. --></errorMessage>
+        <name>SupplyPointCannotbeUnmeasured</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Read Frequency must be Unmeasured if measured is selected as No. --></errorMessage>
+        <name>UnmeasuredSupplyPoint</name>
+    </validationRules>
+</CustomObjectTranslation>

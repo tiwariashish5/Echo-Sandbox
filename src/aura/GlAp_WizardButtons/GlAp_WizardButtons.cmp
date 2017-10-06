@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:attribute access="public" name="startStep" type="boolean" default="true" />
+    <aura:attribute access="public" name="endStep" type="boolean" default="false" />
+    
+    <aura:registerEvent name="wizEvent" type="c:GlAp_WizardEvent"/>
+    <footer class="slds-modal__footer">
+        <aura:if isTrue="{!v.startStep==false}">
+            <button type="button" class="slds-button slds-button--brand" onclick="{!c.doBack}">Back</button>
+        </aura:if>
+        <button type="button" class="slds-button slds-button--neutral" onclick="{!c.doCancel}">Cancel</button>
+        <aura:if isTrue="{!v.endStep==false}">
+            <button type="button" class="slds-button slds-button--brand" onclick="{!c.doNext}">Next</button>
+        </aura:if>
+    </footer>
+</aura:component>

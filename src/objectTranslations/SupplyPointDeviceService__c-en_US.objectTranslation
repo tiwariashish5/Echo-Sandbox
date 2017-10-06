@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Supply Point Device Service</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Supply Point Device Services</value>
+    </caseValues>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>ServiceType__c</name>
+        <relationshipLabel><!-- Supply Point Device Services --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Supply Point Device --></label>
+        <name>SupplyPointDevice__c</name>
+        <relationshipLabel><!-- Supply Point Device Services --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Supply Point Device Service Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

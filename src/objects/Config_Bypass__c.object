@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>18-Aug-2017 Accenture Created custom setting to mute trigger</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>MuteTrigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>18-Aug-2017 Accenture : Created field to mute all triggers</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to mute Object triggers</inlineHelpText>
+        <label>Mute Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Object__c</fullName>
+        <externalId>false</externalId>
+        <label>Object</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Config Bypass</label>
+    <visibility>Public</visibility>
+</CustomObject>

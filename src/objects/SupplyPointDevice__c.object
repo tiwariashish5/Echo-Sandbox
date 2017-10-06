@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Supply_Point_Device_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>ActiveBackground__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used for reference in roll-up summary field &quot;Number of Active Supply Point Device&quot; on Supply Point as Active (formula) field can&apos;t be used. Use field update to copy the value from &quot;Active&quot; field. Hide from page layout</description>
+        <externalId>false</externalId>
+        <label>Active (background)</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <description>1. IF Today is greater than Installation date and Removal Date is BLANK, then Active
+2. IF Removal Date is not BLANK and Instalment Date &lt;=TODAY&lt;=Removal Date, then Active
+ELSE Inactive</description>
+        <externalId>false</externalId>
+        <formula>AND(InstallationDate__c  &lt;=  TODAY(),RemovalDate__c  &gt;=  TODAY())  ||   AND( TODAY()  &gt;=  InstallationDate__c,ISBLANK(RemovalDate__c) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DefaultAverageDailyUsage__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Average Daily Usage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DeviceLocationPostcode__c</fullName>
+        <description>Retrieve the Postcode of the Location that the Device is linked through Supply Point and populate it for Grouping of Devices.</description>
+        <externalId>false</externalId>
+        <formula>SupplyPoint__r.Location__r.PostalZIPCode__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Device Location Postcode</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Device__c</fullName>
+        <externalId>false</externalId>
+        <label>Device</label>
+        <referenceTo>Device__c</referenceTo>
+        <relationshipLabel>Supply Point Devices</relationshipLabel>
+        <relationshipName>SupplyPointDevices</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>InstallationDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Installation Date</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ReadFrequency__c</fullName>
+        <description>Created as per JIRA task AT-295 to fetch Read Frequency from parent Supply Point.</description>
+        <externalId>false</externalId>
+        <formula>TEXT( SupplyPoint__r.ReadFrequency__c )</formula>
+        <label>Read Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RemovalDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Removal Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SupplyPoint__c</fullName>
+        <externalId>false</externalId>
+        <label>Supply Point</label>
+        <referenceTo>SupplyPoint__c</referenceTo>
+        <relationshipLabel>Supply Point Devices</relationshipLabel>
+        <relationshipName>Supply_Point_Devices</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Supply Point Device</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SPD-{000000000}</displayFormat>
+        <label>Supply Point Device Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Supply Point Devices</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Agreed_Rate_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>EndDate__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LeapYear__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Leap Year</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RetailAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>Retail Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ServiceItem__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Item</label>
+        <referenceTo>ServiceItem__c</referenceTo>
+        <relationshipLabel>Agreed Rates</relationshipLabel>
+        <relationshipName>AgreedRates</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>StartDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>WholesaleAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>Wholesale Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Agreed Rate</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>AR-{000000000}</displayFormat>
+        <label>Agreed Rate Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Agreed Rates</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ARateServiceItemMustNotBeChanged</fullName>
+        <active>true</active>
+        <description>Cannot be changed once saved (warning? Something like that)</description>
+        <errorConditionFormula>ISCHANGED( ServiceItem__c )</errorConditionFormula>
+        <errorMessage>Service Item can not be changed once entered.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ARateStartDateAndEndDateMustNotBeChanged</fullName>
+        <active>true</active>
+        <description>Start Date and End Date Cannot be changed once saved.</description>
+        <errorConditionFormula>AND( NOT(ISBLANK(PRIORVALUE(EndDate__c ))),ISCHANGED( EndDate__c )) || ISCHANGED( StartDate__c )</errorConditionFormula>
+        <errorMessage>Start Date and End Date cannot be changed once entered</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ARateStartDateMustbeBeforeEndDate</fullName>
+        <active>true</active>
+        <description>Start Date must be before End Date or End Date cannot be before Start Date</description>
+        <errorConditionFormula>StartDate__c &gt;= EndDate__c</errorConditionFormula>
+        <errorMessage>Start Date must be before End Date.</errorMessage>
+    </validationRules>
+</CustomObject>

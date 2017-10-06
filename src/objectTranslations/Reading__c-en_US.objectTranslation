@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Reading</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Readings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Device Reading --></label>
+        <name>ActualDeviceReading__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Reference --></label>
+        <name>DeviceReference__c</name>
+        <relationshipLabel><!-- Readings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Gross Consumption --></label>
+        <name>GrossConsumption__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reader Remarks --></label>
+        <name>ReaderRemarks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reader --></label>
+        <name>Reader__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reading Date --></label>
+        <name>ReadingDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reading Type --></label>
+        <name>ReadingType__c</name>
+        <picklistValues>
+            <masterLabel>Company Reading</masterLabel>
+            <translation><!-- Company Reading --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Reading</masterLabel>
+            <translation><!-- Customer Reading --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cyclic Reading</masterLabel>
+            <translation><!-- Cyclic Reading --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estimate Final</masterLabel>
+            <translation><!-- Estimate Final --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estimate Initial</masterLabel>
+            <translation><!-- Estimate Initial --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reading --></label>
+        <name>Reading__c</name>
+    </fields>
+    <layouts>
+        <layout>Reading Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Actual Device Reading can not be greater than the number of Digits on Device. --></errorMessage>
+        <name>ReadingMustNotBeGreaterThanDeviceDigits</name>
+    </validationRules>
+</CustomObjectTranslation>

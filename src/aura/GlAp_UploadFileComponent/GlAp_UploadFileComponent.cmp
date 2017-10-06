@@ -1,0 +1,43 @@
+<!-- 
+/******************************************************************************
+@author    		Accenture: Patrick Dixon
+@date      		26 Sep 2017
+@description 	Component to upload a file
+*******************************************************************************/
+ -->
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" 
+		extensible="true" access="global" 
+		controller="GlAp_UploadFileComponentCtrlr">
+
+	<!-- component attributes -->
+    <aura:attribute name="parentId" type="Id"/>
+    <aura:attribute name="error" type="String" default=""/>
+    
+	<c:GlAp_SpinnerComponent aura:id="spinner"/>
+
+	<div class="container">
+		<!-- errors -->
+		<aura:if isTrue="{!not(empty(v.error))}">
+			<div class="recordError">
+				<ui:message title="Error" severity="error" closable="true">
+					{!v.error}
+				</ui:message>
+			</div>
+		</aura:if>
+
+		<lightning:input type="file" label="Attachment" name="file" multiple="true" accept="image/png, .zip, .docx, .pdf" onchange="{!c.save }"/>
+
+<!-- 
+		<input class="slds-file-selector__input slds-assistive-text" 
+				accept="image/png" id="file-upload-input-01" 
+				aria-labelledby="file-selector-primary-label file-selector-secondary-label" 
+				type="file" />
+
+        <input type="file" class="file" aura:id="file" />
+        <ui:button label="Save" press="{!c.save}"/>
+ -->
+        
+    </div>
+    
+
+</aura:component>

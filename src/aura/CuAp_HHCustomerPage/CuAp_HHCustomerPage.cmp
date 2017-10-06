@@ -1,0 +1,72 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,flexipage:availableForAllPageTypes" access="global" controller="CuAp_HHCustomerController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:attribute name="manageFields" type="boolean" default="false" description="To open record type selection modal"/>
+    <aura:attribute name="HHWrapper" type="CuAp_HHWrapper" />
+    <aura:attribute name="recordId" type="Id" />
+	<aura:attribute name="conFieldPro" Type="List" access="public"/>
+    <aura:attribute name="accFieldPro" Type="List" access="public"/>
+    <aura:attribute name="contact" type="Contact" default="{'sObjectType':'Contact', 'FirstName':'Test'}"/>
+    <div>
+        <aura:if isTrue="{!v.manageFields}">   
+            <div>          
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-slide-up-open slds-modal_large">
+                    <div class="slds-modal__container">
+					"{!v.HHWrapper.contact.FirstName}"
+					"{!v.HHWrapper.contact}"
+					"{!v.contact}"
+					"{!v.contact.FirstName}"
+                    	<!--- ••• -->
+                       
+                        
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.closeModal}">
+                                <c:GlAp_Svg class="slds-button__icon slds-button__icon_large" aria-hidden="true" xlinkHref="{!$Resource.SLDS24 + '/assets/icons/utility-sprite/svg/symbols.svg#close'}" />
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Household Customer</h2>
+                        </header>
+                        <div class="slds-form slds-form_compound slds-p-top_medium">
+								<div class="slds-form-element__row">
+										<div class="slds-form-element slds-size_1-of-2" >
+											<c:GlAp_GenericField aura:id="FirstName" 
+																 object="{!v.contact}" 
+																 objectName="Contact" 
+																 fieldType="text" 
+																 fieldName="FirstName" 
+																 editMode="true" 
+																 isEditable="true"  
+																 label="First Name" 
+																 />
+										</div>
+										<div class="slds-form-element slds-size_1-of-2">
+											<c:GlAp_GenericField aura:id="LastName" 
+																 object="{!v.contact}" 
+																 objectName="Contact" 
+																 fieldType="text" 
+																 fieldName="LastName" 
+																 editMode="true" 
+																 isEditable="true" 
+																 picklistValues="" 
+																 label="Last Name" 
+																 />
+										</div>
+									</div>
+						</div>
+                        <footer class="slds-modal__footer">
+                            <button type="button" class="slds-button slds-button--neutral" onclick="{!c.closeModal}">Cancel</button>
+                            <button type="button" class="slds-button slds-button--brand" onclick="{!c.closeModal}">Save</button>
+                        </footer>       
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open">
+                </div>
+            </div>
+            <aura:set attribute="else">
+            <div>
+                    <button type="button" class="slds-button slds-button--neutral" onclick="{!c.doManageFields}">Edit</button>
+                </div>     
+            </aura:set>
+        </aura:if>
+    </div>
+    
+</aura:component>

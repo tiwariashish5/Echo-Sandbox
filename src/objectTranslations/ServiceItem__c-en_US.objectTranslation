@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Service Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Service Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Available Service Items --></label>
+        <name>AvailableServiceItems__c</name>
+        <relationshipLabel><!-- Service Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Item Type --></label>
+        <name>ServiceItemType__c</name>
+        <relationshipLabel><!-- Service Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service --></label>
+        <name>Service__c</name>
+        <relationshipLabel><!-- Service Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>StartDate__c</name>
+    </fields>
+    <layouts>
+        <layout>Service Item Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Start Date must be before End Date --></errorMessage>
+        <name>ServiceItemStartDateMustbeBeforeEndDate</name>
+    </validationRules>
+</CustomObjectTranslation>

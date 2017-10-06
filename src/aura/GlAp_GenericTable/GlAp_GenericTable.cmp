@@ -1,0 +1,24 @@
+<aura:component >
+    <aura:attribute name="fieldList" type="List" access="public"/>
+    <aura:attribute name="recordList" type="List" access="public"/>
+    <aura:attribute name="showSelect"  type="boolean" default="true"/>    
+    <table class="slds-table slds-table--bordered slds-table--col-bordered" style="table-layout: fixed; width:100%;">
+        <thead>
+            <tr class="slds-text-title--caps">
+                <aura:if isTrue="{!v.showSelect}">  
+                    <th scope="col" style="width: 3.75rem;"></th>
+                </aura:if>
+                <aura:iteration items="{!v.fieldList}" var="fldItem" indexVar="Idx" >
+                    <th scope="col" class="{!'column' + Idx}" style="width: 10rem;">
+                        <div title="{!fldItem.fieldLabel}">{!fldItem.fieldLabel}</div>
+                    </th>
+                </aura:iteration>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.recordList}" var="record" >
+                <c:GlAp_GenericListRow fieldList="{!v.fieldList}" record="{!record}" showSelect="{!v.showSelect}" />
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

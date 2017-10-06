@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Location Occupant</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Location Occupants</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Location Occupants --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active Background --></label>
+        <name>ActiveBackground__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <relationshipLabel><!-- Location Occupants --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number of Occupiers --></label>
+        <name>NumberofOccupiers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Occupancy Type --></label>
+        <name>OccupancyType__c</name>
+        <picklistValues>
+            <masterLabel>Owner</masterLabel>
+            <translation><!-- Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tenant</masterLabel>
+            <translation><!-- Tenant --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary --></label>
+        <name>Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show on Bill --></label>
+        <name>Show_on_Bill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>StartDate__c</name>
+    </fields>
+    <layouts>
+        <layout>Location Occupant Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Location Occupant</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Number of Occupiers is mandatory for Household Accounts. --></errorMessage>
+        <name>NumberOfOccupierIsManadatoryForHHAccount</name>
+    </validationRules>
+</CustomObjectTranslation>

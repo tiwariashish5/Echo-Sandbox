@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Division</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Divisions</value>
+    </caseValues>
+    <fields>
+        <help><!-- Geographical  Area, determines the wholesale company and the rates applied --></help>
+        <label><!-- Charging Area --></label>
+        <name>ChargingArea__c</name>
+        <picklistValues>
+            <masterLabel>STW - Lower Severn</masterLabel>
+            <translation><!-- STW - Lower Severn --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Geographical  Sub Area, determines the wholesale company and the rates applied --></help>
+        <label><!-- Charging Division --></label>
+        <name>ChargingDivision__c</name>
+        <picklistValues>
+            <masterLabel>Lower Severn</masterLabel>
+            <translation><!-- Lower Severn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upper Severn</masterLabel>
+            <translation><!-- Upper Severn --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Division Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

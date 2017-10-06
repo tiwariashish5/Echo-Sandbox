@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Payment_Plan_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Active__c</fullName>
+        <description>If Start Date&lt;=TODAY=&lt;End Date , then Active, else Inactive</description>
+        <externalId>false</externalId>
+        <formula>AND( TODAY()  &gt;=  StartDate__c , TODAY()  &lt;=  EndDate__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ContractOrder__c</fullName>
+        <description>Look up to Contract</description>
+        <externalId>false</externalId>
+        <label>Contract/Order</label>
+        <referenceTo>Contract__c</referenceTo>
+        <relationshipLabel>Payment Plans</relationshipLabel>
+        <relationshipName>PaymentPlans</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>DayOfMonth__c</fullName>
+        <externalId>false</externalId>
+        <label>Day Of Month</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1st</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2nd</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3rd</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4th</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>DayOfWeek__c</fullName>
+        <externalId>false</externalId>
+        <label>Day Of Week</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Monday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tuesday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wednesday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>EndDate__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>NumberOfInstalments__c</fullName>
+        <description>Max number of the installments from the payment plan type. Can be edited by the agent. Limited by Last Installment Date ( Payment Plan Type)</description>
+        <externalId>false</externalId>
+        <label>Number Of Instalments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PaymentFrequency__c</fullName>
+        <description>(Copy the value from Payment Frequency from related Payment Plan Type record)
+Should this be on the payment plan type object in order to set the instalment schedule records</description>
+        <externalId>false</externalId>
+        <formula>TEXT(PaymentPlanType__r.PaymentFrequency__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payment Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PaymentPlanType__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>look up to the Payment Plan Type object</description>
+        <externalId>false</externalId>
+        <label>Payment Plan Type</label>
+        <referenceTo>PaymentPlanType__c</referenceTo>
+        <relationshipLabel>Payment Plans</relationshipLabel>
+        <relationshipName>PaymentPlans</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PlanAmount__c</fullName>
+        <description>Calculated by a budget calculation. For MP1, it&apos;s just going to be a flat amount, not a calculated amount.
+Including the Amount Due (after MP1)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The intitial recommended amount</inlineHelpText>
+        <label>Plan Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StartDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TotalInstalmentAmount__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum of the total value of instalments</inlineHelpText>
+        <label>Total Instalment Amount</label>
+        <summarizedField>Instalment__c.InstalmentAmountDue__c</summarizedField>
+        <summaryForeignKey>Instalment__c.PaymentPlan__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <label>Payment Plan</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PPN-{0000000000}</displayFormat>
+        <label>Payment Plan Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Payment Plans</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>DayOfMonthShouldBeBlank</fullName>
+        <active>true</active>
+        <description>Day of Month should be blank if Payment Frequency if Weekly, Fortnightly, or Yearly</description>
+        <errorConditionFormula>AND((PaymentFrequency__c &lt;&gt; &apos;Monthly&apos;) , NOT(ISPICKVAL( DayOfMonth__c ,&apos;&apos;)) )</errorConditionFormula>
+        <errorMessage>Day of Month should be blank if Payment Frequency is Weekly, Fortnightly, Yearly.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>DayOfWeekShouldBeBlank</fullName>
+        <active>true</active>
+        <description>Day of week should be blank if Payment Frequency is Monthly or Yearly</description>
+        <errorConditionFormula>AND((PaymentFrequency__c = &apos;Monthly&apos; || PaymentFrequency__c = &apos;Yearly&apos;),  NOT(ISPICKVAL( DayOfWeek__c ,&apos;&apos;)))</errorConditionFormula>
+        <errorMessage>Day of Week should be blank if Payment Frequency is Monthly or Yearly.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PaymentPlaEndDatecannotbeBeforeStartDate</fullName>
+        <active>true</active>
+        <description>End Date can not be before Start Date</description>
+        <errorConditionFormula>StartDate__c &gt;= EndDate__c</errorConditionFormula>
+        <errorDisplayField>EndDate__c</errorDisplayField>
+        <errorMessage>End Date cannot be before Start Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PaymentPlanEndDateMustBeBeforeStartDate</fullName>
+        <active>true</active>
+        <description>The End date cannot be before the Start Date</description>
+        <errorConditionFormula>EndDate__c  &lt;  StartDate__c</errorConditionFormula>
+        <errorMessage>End Date must be greater than equal to Start Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RequiredDayOfMonth</fullName>
+        <active>true</active>
+        <description>Day of month field is required If Payment Frequency is Monthly;</description>
+        <errorConditionFormula>AND(PaymentFrequency__c=&apos;Monthly&apos;,ISPICKVAL( DayOfMonth__c ,&apos;&apos;))</errorConditionFormula>
+        <errorDisplayField>DayOfMonth__c</errorDisplayField>
+        <errorMessage>Day of Month is required If Payment Frequency is Monthly</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RequiredDayOfWeek</fullName>
+        <active>true</active>
+        <description>Day of week is required If Payment Frequency is Weekly or Fortnightly.</description>
+        <errorConditionFormula>AND((PaymentFrequency__c  =  &apos;Weekly&apos; ||   PaymentFrequency__c  =  &apos;Fortnightly&apos;), ISPICKVAL(  DayOfWeek__c ,&apos;&apos;))</errorConditionFormula>
+        <errorDisplayField>DayOfWeek__c</errorDisplayField>
+        <errorMessage>Day of Week is required If Payment Frequency is Weekly or Fortnightly.</errorMessage>
+    </validationRules>
+</CustomObject>

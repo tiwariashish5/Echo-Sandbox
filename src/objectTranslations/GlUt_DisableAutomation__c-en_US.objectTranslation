@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Disable Automation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Enable Automation</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Triggers Disabled --></label>
+        <name>AccountTriggers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill Triggers Disabled --></label>
+        <name>BillTriggers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Triggers Disabled --></label>
+        <name>ContactTriggers__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReadingTriggers Disabled --></label>
+        <name>ReadingTriggers__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

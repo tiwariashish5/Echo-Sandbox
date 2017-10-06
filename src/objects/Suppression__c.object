@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Suppression_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Suppressions</relationshipLabel>
+        <relationshipName>Suppressions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>OR(AND(SuppressionStartDate__c &lt;= TODAY(),TODAY()&lt;=SuppressionEndDate__c),
+AND(SuppressionStartDate__c &lt;=TODAY(),ISBLANK(SuppressionEndDate__c )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ContractGroup__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract Group</label>
+        <referenceTo>ContractGroup__c</referenceTo>
+        <relationshipLabel>Suppressions</relationshipLabel>
+        <relationshipName>Suppressions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <referenceTo>Contract__c</referenceTo>
+        <relationshipLabel>Suppressions</relationshipLabel>
+        <relationshipName>Suppressions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SuppressBillPrint__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Suppress Bill Print</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SuppressRecoveryNotice__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Suppress Recovery Notice</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SuppressionEndDate__c</fullName>
+        <description>End Date of Suppression</description>
+        <externalId>false</externalId>
+        <label>Suppression End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SuppressionReason__c</fullName>
+        <description>Client specific. Clients may add or remove the picklist values based on their own business.</description>
+        <externalId>false</externalId>
+        <label>Suppression Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Court Query</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Court Summons Issued</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meter Reading Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Payment with Non Cleared Funds</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Post Dated Cheques</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Payment Query</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Speculative Correspondence</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SuppressionStartDate__c</fullName>
+        <description>Start Date of Suppression.</description>
+        <externalId>false</externalId>
+        <label>Suppression Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Suppression</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SID-{00000000}</displayFormat>
+        <label>Suppression ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Suppressions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>BeforeSuppressionStartDate</fullName>
+        <active>true</active>
+        <description>Validates that a custom field called End Date does not come before another custom field called Start Date.</description>
+        <errorConditionFormula>SuppressionStartDate__c &gt; SuppressionEndDate__c</errorConditionFormula>
+        <errorDisplayField>SuppressionEndDate__c</errorDisplayField>
+        <errorMessage>End Date cannot be before Start Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BillPrintAndRecoveryCantbeBlank</fullName>
+        <active>true</active>
+        <description>Suppress Bill Print and Suppress Recovery Notice can&apos;t be both blank</description>
+        <errorConditionFormula>AND( SuppressBillPrint__c =FALSE, SuppressRecoveryNotice__c =FALSE)</errorConditionFormula>
+        <errorDisplayField>SuppressRecoveryNotice__c</errorDisplayField>
+        <errorMessage>Suppress Bill Print and Suppress Recovery Notice can&apos;t be both blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LessThanToday</fullName>
+        <active>true</active>
+        <description>Can&apos;t be earlier than TODAY</description>
+        <errorConditionFormula>SuppressionStartDate__c &gt; TODAY()</errorConditionFormula>
+        <errorDisplayField>SuppressionStartDate__c</errorDisplayField>
+        <errorMessage>Can&apos;t be earlier than TODAY&apos;s Date.</errorMessage>
+    </validationRules>
+</CustomObject>

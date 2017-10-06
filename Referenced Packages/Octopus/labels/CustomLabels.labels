@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>L_OCT_Active</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Active</shortDescription>
+        <value>Active</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_ApexClasses</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-ApexClasses</shortDescription>
+        <value>Apex Classes</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Apex_Class_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Apex Class Information</shortDescription>
+        <value>Apex Class Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Apex_Class_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Apex Class Name</shortDescription>
+        <value>Apex Class Name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Apex_Component_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Apex Component Information</shortDescription>
+        <value>Apex Component Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Apex_Components</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Apex Components</shortDescription>
+        <value>Apex Components</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Api_Version</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Api Version</shortDescription>
+        <value>Api Version</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Approval_Processes</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Approval Processes</shortDescription>
+        <value>Approval Processes</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Approval_Processes_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Approval Processes Information</shortDescription>
+        <value>Approval Processes Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Async_Apex_Job_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Async Apex Job Information</shortDescription>
+        <value>Async Apex Job Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Body_Length</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Body Length</shortDescription>
+        <value>Body Length</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Cache_Control</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Cache Control</shortDescription>
+        <value>Cache Control</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_City</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-City</shortDescription>
+        <value>City</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Completed_Date</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Completed Date</shortDescription>
+        <value>Completed Date</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Content_Type</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Content Type</shortDescription>
+        <value>Content Type</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Controller_Key</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Controller Key</shortDescription>
+        <value>Controller Key</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Country</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Country</shortDescription>
+        <value>Country</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Created_By</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Created By</shortDescription>
+        <value>Created By</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Created_Date</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Created Date</shortDescription>
+        <value>Created Date</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Custom_Objects_and_Fields</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Custom Objects and Fields</shortDescription>
+        <value>Custom Objects and Fields</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Custom_Objects_and_Fields_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Custom Objects and Fields Information</shortDescription>
+        <value>Custom Objects and Fields Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Dashboard_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Dashboard Information</shortDescription>
+        <value>Dashboard Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Description</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Description</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Division</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Division</shortDescription>
+        <value>Division</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_DoNotInclude</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-DoNotInclude</shortDescription>
+        <value>Do not include Managed Package Components</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Download_As</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Download As</shortDescription>
+        <value>Download As</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Email</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Email</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Email_Template_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Email Template Information</shortDescription>
+        <value>Email Template Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Extended_Status</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Extended Status</shortDescription>
+        <value>Extended Status</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Fax</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Fax</shortDescription>
+        <value>Fax</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Field_API_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Field API name</shortDescription>
+        <value>Field API name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Field_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Field Label</shortDescription>
+        <value>Field Label</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_File_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-File Name</shortDescription>
+        <value>File Name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Fiscal_Year_Start_Month</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Fiscal Year Start Month</shortDescription>
+        <value>Fiscal Year Start Month</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Flows</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Flows</shortDescription>
+        <value>Flows</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Folder_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Folder Name</shortDescription>
+        <value>Folder Name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Help Text</shortDescription>
+        <value>Help Text</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Ifyouareunable</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Ifyouareunable</shortDescription>
+        <value>If you are unable to view Approval Processes/ Validation Rules/ Workflow Rules/ Workflow Field Updates,please ensure that your salesforce instance URL has been added in the remote site settings. 
+(Go to Setup&gt; in Administer&gt; Security Controls&gt; Remote Site Settings)
+For example, if your Salesforce instance is na12.salesforce.com remote site setting would be https://na12.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Is_Active</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Is Active</shortDescription>
+        <value>Is Active</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Is_Deleted</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Is Deleted</shortDescription>
+        <value>Is Deleted</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Is_Valid</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Is Valid</shortDescription>
+        <value>Is Valid</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Job_Items_Processed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Job Items Processed</shortDescription>
+        <value>Job Items Processed</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Job_Type</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Job Type</shortDescription>
+        <value>Job Type</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Language_Locale_Key</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Language Locale Key</shortDescription>
+        <value>Language Locale Key</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Last_Modified_By</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Last Modified By</shortDescription>
+        <value>Last Modified By</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Last_Modified_Date</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Last Modified Date</shortDescription>
+        <value>Last Modified Date</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Last_Run_Date</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Last Run Date</shortDescription>
+        <value>Last Run Date</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Last_Used_Date</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Last Used Date</shortDescription>
+        <value>Last Used Date</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Length_Without_Comments</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Length Without Comments</shortDescription>
+        <value>Length Without Comments</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Mail_Merge_Template_List_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Mail Merge Template List Information</shortDescription>
+        <value>Mail Merge Template List Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Mail_Merge_Templates</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Mail Merge Templates</shortDescription>
+        <value>Mail Merge Templates</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Master_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Master Label</shortDescription>
+        <value>Master Label</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_MaxNumber</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-MaxNumberOfRecords</shortDescription>
+        <value>Maximum number of records to be displayed for each</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Method_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Method Name</shortDescription>
+        <value>Method Name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Namespace_Prefix</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Namespace Prefix</shortDescription>
+        <value>Namespace Prefix</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Number_Of_Errors</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Number Of Errors</shortDescription>
+        <value>Number Of Errors</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Object</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Object</shortDescription>
+        <value>Object</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Object_Permission</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Object Permission</shortDescription>
+        <value>Object Permission</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Object_Permission_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Object Permission Information</shortDescription>
+        <value>Object Permission Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Octopus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>L-OCT-Octopus</shortDescription>
+        <value>Octopus</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_OctopusCan</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-OctopusCan</shortDescription>
+        <value>Octopus can sometimes encounter &apos;Apex heap size too large&apos; error due to Salesforce governer limits, please deselect a few items or choose a lower picklist value to resolve the error.</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Organisation</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Organisation</shortDescription>
+        <value>Organisation</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Organization_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Organization Information</shortDescription>
+        <value>Organization Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Organization_Type</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Organization Type</shortDescription>
+        <value>Organization Type</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Owner_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Owner Name</shortDescription>
+        <value>Owner Name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Permission_Set_Owned_by_Profile</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Permission Set Owned by Profile</shortDescription>
+        <value>Permission Set Owned by Profile</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Permissions_Create</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Permissions Create</shortDescription>
+        <value>Permissions Create</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Permissions_Delete</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Permissions Delete</shortDescription>
+        <value>Permissions Delete</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Permissions_Edit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Permissions Edit</shortDescription>
+        <value>Permissions Edit</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Permissions_Modify_All_Records</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Permissions Modify All Records</shortDescription>
+        <value>Permissions Modify All Records</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Permissions_Read</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Permissions Read</shortDescription>
+        <value>Permissions Read</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Permissions_View_All_Records</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Permissions View All Records</shortDescription>
+        <value>Permissions View All Records</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Phone</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Phone</shortDescription>
+        <value>Phone</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Postal_Code</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Postal Code</shortDescription>
+        <value>Postal Code</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Primary_Contact</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Primary Contact</shortDescription>
+        <value>Primary Contact</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Process_Builder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Process Builder</shortDescription>
+        <value>Process Builder</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Profile</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Profile</shortDescription>
+        <value>Profile</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Profiles</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Profiles</shortDescription>
+        <value>Profiles</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Queues</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Queues</shortDescription>
+        <value>Queues</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Record_Types</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Record Types</shortDescription>
+        <value>Record Types</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Record_Types_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Record Types Information</shortDescription>
+        <value>Record Types Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Report_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Report Information</shortDescription>
+        <value>Report Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Report_Unique_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Report Unique Name</shortDescription>
+        <value>Report Unique Name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Reports</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Reports</shortDescription>
+        <value>Reports</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Reports_To</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Reports To</shortDescription>
+        <value>Reports To</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Role</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Role</shortDescription>
+        <value>Role</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_SalesforceInstance</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-SalesforceInstance</shortDescription>
+        <value>Salesforce Instance Details</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Select_All</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Select All</shortDescription>
+        <value>Select All</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Send_Email_to_Members</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Send Email to Members</shortDescription>
+        <value>Send Email to Members</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Size_Without_Comments</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Size Without Comments</shortDescription>
+        <value>Size Without Comments</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Source_Table</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Source Table</shortDescription>
+        <value>Source Table</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Standard_Objects_and_Fields</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Standard Objects and Fields</shortDescription>
+        <value>Standard Objects and Fields</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_State</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-State</shortDescription>
+        <value>State</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Static_Resources</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Static Resources</shortDescription>
+        <value>Static Resources</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Static_Resources_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Static Resources Information</shortDescription>
+        <value>Static Resources Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Status</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Status</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Street</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Street</shortDescription>
+        <value>Street</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Subject</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Subject</shortDescription>
+        <value>Subject</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Supported_Objects</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Supported Objects</shortDescription>
+        <value>Supported Objects</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Table_Enum_or_Id</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Table Enum or Id</shortDescription>
+        <value>Table Enum or Id</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Template_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Template Name</shortDescription>
+        <value>Template Name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Text_Color</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Text Color</shortDescription>
+        <value>Text Color</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Title</shortDescription>
+        <value>Title</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Title_Color</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Title Color</shortDescription>
+        <value>Title Color</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Total_Job_Items</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Total Job Items</shortDescription>
+        <value>Total Job Items</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Trigger_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Trigger Information</shortDescription>
+        <value>Trigger Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Triggers</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Triggers</shortDescription>
+        <value>Triggers</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Type</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Type</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Usage_After_Insert</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Usage After Insert</shortDescription>
+        <value>Usage After Insert</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Usage_After_Undelete</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Usage After Undelete</shortDescription>
+        <value>Usage After Undelete</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Usage_After_Update</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Usage After Update</shortDescription>
+        <value>Usage After Update</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Usage_Before_Delete</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Usage Before Delete</shortDescription>
+        <value>Usage Before Delete</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Usage_Before_Insert</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Usage Before Insert</shortDescription>
+        <value>Usage Before Insert</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Usage_Before_Update</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Usage Before Update</shortDescription>
+        <value>Usage Before Update</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Usage_Is_Bulk</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Usage Is Bulk</shortDescription>
+        <value>Usage Is Bulk</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_User</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-User</shortDescription>
+        <value>User</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_User_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-User Information</shortDescription>
+        <value>User Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_User_License_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-User License Name</shortDescription>
+        <value>User License Name</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_User_Roles_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-User Roles Information</shortDescription>
+        <value>User Roles Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_User_Type</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-User Type</shortDescription>
+        <value>User Type</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Users</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Users</shortDescription>
+        <value>Users</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Validation_Rules</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Validation Rules</shortDescription>
+        <value>Validation Rules</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Viewbutton</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Viewbutton</shortDescription>
+        <value>View</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_VisualForce_Pages</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- VisualForce Pages</shortDescription>
+        <value>VisualForce Pages</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Visualforce_Page_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Visualforce Page Information</shortDescription>
+        <value>Visualforce Page Information</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Workflow_Field_Updates</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- Workflow Field Updates</shortDescription>
+        <value>Workflow Field Updates</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_Workflow_Rules</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-Workflow Rules</shortDescription>
+        <value>Workflow Rules</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_getToKnow</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT- getToKnow</shortDescription>
+        <value>Get to know your Salesforce Instance</value>
+    </labels>
+    <labels>
+        <fullName>L_OCT_sobject_type</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>L-OCT-sobject type</shortDescription>
+        <value>sobject type</value>
+    </labels>
+</CustomLabels>

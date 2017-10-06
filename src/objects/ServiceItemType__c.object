@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Service_Item_Type_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Specific Service Item Type under a Service Item Family based on certain attributes defined on other objects such as Device Type (eg. Measured Water Fixed Charge - 0.40)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>BillDescription__c</fullName>
+        <description>Provides details about the Service Item Type for Customer&apos;s information so it will be printed on the bill.</description>
+        <externalId>false</externalId>
+        <label>Bill Description</label>
+        <length>90</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DeviceType__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup on Device Type in order to get Device size.</description>
+        <externalId>false</externalId>
+        <label>Device Type</label>
+        <referenceTo>DeviceType__c</referenceTo>
+        <relationshipLabel>Service Item Types</relationshipLabel>
+        <relationshipName>ServiceItemTypes</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Region that the Service Item Type will be applied to (Charging Area)</description>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <referenceTo>Division__c</referenceTo>
+        <relationshipLabel>Service Item Types</relationshipLabel>
+        <relationshipName>ServiceItemTypes</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EligibleForAnAgreedRate__c</fullName>
+        <description>This will identify if the Service Item Type can have an Agreed Rate</description>
+        <externalId>false</externalId>
+        <label>Eligible for an Agreed Rate</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>EndDate__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ServiceCompany__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Wholesaler</description>
+        <externalId>false</externalId>
+        <label>Service Company</label>
+        <referenceTo>Wholesaler__c</referenceTo>
+        <relationshipLabel>Service Item Types</relationshipLabel>
+        <relationshipName>ServiceItemTypes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ServiceItemFamily__c</fullName>
+        <description>Parent record of Service Item Type</description>
+        <externalId>false</externalId>
+        <label>Service Item Family</label>
+        <referenceTo>ServiceItemFamily__c</referenceTo>
+        <relationshipLabel>Service Item Types</relationshipLabel>
+        <relationshipName>ServiceItemTypes</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>StartDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Service Item Type</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Service Item Type Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Service Item Types</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>StartDateMustbeBeforeEndDate</fullName>
+        <active>true</active>
+        <description>Start Date must be before End Date or End Date cannot be before Start Date.</description>
+        <errorConditionFormula>StartDate__c &gt;= EndDate__c</errorConditionFormula>
+        <errorMessage>Start Date must be before End Date</errorMessage>
+    </validationRules>
+</CustomObject>

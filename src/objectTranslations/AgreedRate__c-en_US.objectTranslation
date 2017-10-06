@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Agreed Rate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Agreed Rates</value>
+    </caseValues>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Leap Year --></label>
+        <name>LeapYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retail Amount --></label>
+        <name>RetailAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Item --></label>
+        <name>ServiceItem__c</name>
+        <relationshipLabel><!-- Agreed Rates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wholesale Amount --></label>
+        <name>WholesaleAmount__c</name>
+    </fields>
+    <layouts>
+        <layout>Agreed Rate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Service Item can not be changed once entered. --></errorMessage>
+        <name>ARateServiceItemMustNotBeChanged</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start Date and End Date cannot be changed once entered --></errorMessage>
+        <name>ARateStartDateAndEndDateMustNotBeChanged</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start Date must be before End Date. --></errorMessage>
+        <name>ARateStartDateMustbeBeforeEndDate</name>
+    </validationRules>
+</CustomObjectTranslation>

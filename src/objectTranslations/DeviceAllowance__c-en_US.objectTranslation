@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Device Allowance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Device Allowances</value>
+    </caseValues>
+    <fields>
+        <label><!-- Service Item --></label>
+        <name>ServiceItem__c</name>
+        <relationshipLabel><!-- Device Allowances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Supply Point --></label>
+        <name>SupplyPoint__c</name>
+        <relationshipLabel><!-- Device Allowances --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

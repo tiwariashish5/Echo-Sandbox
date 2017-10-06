@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Debt Recovery Process</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Debt Recovery Process</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>Contract__c</name>
+        <relationshipLabel><!-- Debt Recovery Process --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debt Recovery Profile --></label>
+        <name>Debt_Recovery_Profile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Evaulate For Debt Recovery --></label>
+        <name>EvaulateForDebtRecovery__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Due Date --></label>
+        <name>PaymentDueDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Stage 1</masterLabel>
+            <translation><!-- Stage 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage 2</masterLabel>
+            <translation><!-- Stage 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage 3</masterLabel>
+            <translation><!-- Stage 3 --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,22 @@
+<!-- 
+/******************************************************************************
+@author    		Accenture: Patrick Dixon
+@date      		20 Sep 2017
+@description 	Component to upload a PDF Template file, save it and call
+				the Heroku webservice to synchronise it in Postgres
+*******************************************************************************/
+ -->
+<aura:component implements="flexipage:availableForAllPageTypes" 
+		extensible="true" access="global" 
+		controller="BlAp_CalculateBillComponentCtrlr">
+
+
+
+
+
+
+
+
+
+
+</aura:component>

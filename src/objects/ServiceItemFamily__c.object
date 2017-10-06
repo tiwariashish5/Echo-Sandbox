@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Service_Item_Family_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Specific &quot;charge type&quot; for a particular service (eg. Measured Water Volume, Measured Water Fixed Charge, Measured Sewerage Volume)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AlgorithmType__c</fullName>
+        <description>Used for bill calc engine to determine which algorithm to run. For now just have &quot;Measured Billing&quot; as picklist value</description>
+        <externalId>false</externalId>
+        <label>Algorithm Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Measured Billing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>EligibleForAgreedRate__c</fullName>
+        <externalId>false</externalId>
+        <label>Eligible For Agreed Rate</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>EndDate__c</fullName>
+        <description>End Date when the Client stops providing this charge under a particular service.</description>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <description>Controls the order of the Service Item  show on the bill.</description>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PostingPriority__c</fullName>
+        <description>Used to define the order of which Bill Item will be paid during payment allocation.</description>
+        <externalId>false</externalId>
+        <label>Posting Priority</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecurrenceFrequency__c</fullName>
+        <description>How often the recurring bills items should be generated.</description>
+        <externalId>false</externalId>
+        <label>Recurrence Frequency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yearly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurring__c</fullName>
+        <description>One off or not:
+Yes: If the user will retrieve a bill for this Service Item at repeating intervals. 
+No: If this is billed one time</description>
+        <externalId>false</externalId>
+        <label>Recurring</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ServiceItemFamilyDescription__c</fullName>
+        <description>Used to provide the details about the Service item Family for Agent&apos;s information.</description>
+        <externalId>false</externalId>
+        <label>Service Item Family Description</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ServiceType__c</fullName>
+        <description>Parent record of the Service Item Family</description>
+        <externalId>false</externalId>
+        <label>Service Type</label>
+        <referenceTo>ServiceType__c</referenceTo>
+        <relationshipLabel>Service Item Family</relationshipLabel>
+        <relationshipName>ServiceItemFamily</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>StartDate__c</fullName>
+        <description>Start Date when the Client starts providing  this charge under a particular service.</description>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Tax__c</fullName>
+        <description>Indicate if the Service Item Family is taxable.</description>
+        <externalId>false</externalId>
+        <label>Tax</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Service Item Family</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Service Item Family Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Service Item Family</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>MandatoryBandInterval</fullName>
+        <active>false</active>
+        <description>Band Interval is mandatory if Banded is selected as yes</description>
+        <errorConditionFormula>AND( ISPICKVAL( Banded__c ,&apos;Yes&apos;),ISPICKVAL( BandInterval__c,&apos;&apos;) )</errorConditionFormula>
+        <errorMessage>Band Interval is mandatory if Banded is selected as YES</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MandatoryRecurringFrequency</fullName>
+        <active>true</active>
+        <description>Recurring Frequency is mandatory if Recurring is selected as yes</description>
+        <errorConditionFormula>AND( TEXT(  Recurring__c ) =&apos;Yes&apos;, 
+ISBLANK(TEXT(  RecurrenceFrequency__c )) )</errorConditionFormula>
+        <errorDisplayField>RecurrenceFrequency__c</errorDisplayField>
+        <errorMessage>Recurring Frequency is mandatory if the Recurring is YES</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>StartDateMustbeBeforeEndDate</fullName>
+        <active>true</active>
+        <description>Start Date must be before End Date or End Date cannot be before Start Date.</description>
+        <errorConditionFormula>StartDate__c &gt;= EndDate__c</errorConditionFormula>
+        <errorMessage>Start Date must be before End Date</errorMessage>
+    </validationRules>
+</CustomObject>

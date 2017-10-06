@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" extensible="true" access="global" controller="GlAp_LightningDataAccess">
+    <aura:attribute name="fieldSet" type="String" access="public" />
+    <aura:attribute name="objectType" type="String" default="Account" access="public" />
+    <aura:attribute name="client" type="sObject"/>
+    <aura:attribute name="fieldSetResults" type="List.GLAp_FieldProps[]" />
+    <aura:attribute name="fieldSetResultsList" type="List.GLAp_FieldProps" />   
+    <aura:attribute name="listOfFields" type="List" access="public" />    
+    <aura:attribute name="whereClause" type="String" access="public" />
+    <div>{!v.body}</div>
+</aura:component>

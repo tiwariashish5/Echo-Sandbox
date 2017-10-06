@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Environment Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Environment Settings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Billing Calculation Endpoint --></label>
+        <name>BillingCalculationEndpoint__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDF Generation Endpoint --></label>
+        <name>PDFGenerationEndpoint__c</name>
+    </fields>
+    <fields>
+        <label><!-- PDF Template Upload Endpoint --></label>
+        <name>PDFTemplateUploadEndpoint__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

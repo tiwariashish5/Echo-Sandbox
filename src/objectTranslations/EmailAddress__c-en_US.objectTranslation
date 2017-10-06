@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>EmailAddress</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>EmailAddress</value>
+    </caseValues>
+    <fields>
+        <label><!-- ClassKeyWord --></label>
+        <name>ClassKeyWord__c</name>
+    </fields>
+    <fields>
+        <label><!-- CompleteTestReportName --></label>
+        <name>CompleteTestReportName__c</name>
+    </fields>
+    <fields>
+        <label><!-- EmailSeparator --></label>
+        <name>EmailSeparator__c</name>
+    </fields>
+    <fields>
+        <label><!-- EmailSubject --></label>
+        <name>EmailSubject__c</name>
+    </fields>
+    <fields>
+        <label><!-- FailTestReportName --></label>
+        <name>FailTestReportName__c</name>
+    </fields>
+    <fields>
+        <label><!-- FileExtension --></label>
+        <name>FileExtension__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobExecutionName1 --></label>
+        <name>JobExecutionName1__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobExecutionName2 --></label>
+        <name>JobExecutionName2__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobExecutionName3 --></label>
+        <name>JobExecutionName3__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobExecutionName4 --></label>
+        <name>JobExecutionName4__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobExecutionTime1 --></label>
+        <name>JobExecutionTime1__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobExecutionTime2 --></label>
+        <name>JobExecutionTime2__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobExecutionTime3 --></label>
+        <name>JobExecutionTime3__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobExecutionTime4 --></label>
+        <name>JobExecutionTime4__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobResult --></label>
+        <name>JobResult__c</name>
+    </fields>
+    <fields>
+        <label><!-- QueueJobName --></label>
+        <name>QueueJobName__c</name>
+    </fields>
+    <fields>
+        <label><!-- QueueScheduleTime --></label>
+        <name>QueueScheduleTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- StatusAborted --></label>
+        <name>StatusAborted__c</name>
+    </fields>
+    <fields>
+        <label><!-- StatusComplete --></label>
+        <name>StatusComplete__c</name>
+    </fields>
+    <fields>
+        <label><!-- StatusFailed --></label>
+        <name>StatusFailed__c</name>
+    </fields>
+    <fields>
+        <label><!-- ccAddress --></label>
+        <name>ccAddress__c</name>
+    </fields>
+    <fields>
+        <help><!-- Multiple Address should be with &quot;;&quot; --></help>
+        <label><!-- toAddress --></label>
+        <name>toAddress__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

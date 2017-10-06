@@ -1,0 +1,36 @@
+<aura:component >
+    <aura:attribute name="fieldList" type="List" access="public"/>
+    <aura:attribute name="record" type="Object" access="public"/>
+    <aura:attribute name="editMode" type="boolean" access="private" />
+    <aura:attribute name="showSelect"  type="boolean" default="true"/>  
+    
+    <aura:registerEvent name="rowEvent" type="c:GlAp_GenericListRowSelectEvent"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <tr class="slds-hint-parent">
+        <aura:if isTrue="{!v.showSelect}">  
+            <td role="gridcell" tabindex="0" class="slds-text-align_right" style="width: 3.75rem;">
+                <div class="slds-checkbox_add-button">
+                    <input type="checkbox" class="slds-assistive-text" id="{!v.record.checkboxId}" tabindex="{!v.record.uniqueId}" value="on" checked="{!v.record.isSelected}" onclick="{!c.doEdit}"/>
+                    <label for="{!v.record.checkboxId}" class="slds-checkbox_faux">
+                        <span class="slds-assistive-text">Select item 1</span>
+                    </label>
+                </div>
+            </td>
+        </aura:if>
+        <aura:iteration items="{!v.fieldList}" var="fldItem" >
+            <td data-label="{!fldItem.fieldName}" style="slds-cell-wrap width: 10rem;">
+                <c:GlAp_GenericField aura:id="{!fldItem.label}" 
+                                     object="{!v.record}" 
+                                     objectName="{!fldItem.parentObject}" 
+                                     fieldType="{!fldItem.fieldType}" 
+                                     fieldName="{!fldItem.fieldName}"
+                                     isEditable="{!fldItem.isEditable}" 
+                                     editMode="{!v.editMode}"
+                                     picklistValues="{!fldItem.pickListValues}" 
+                                     listView="true" />	
+                
+            </td>
+        </aura:iteration>
+    </tr>
+</aura:component>

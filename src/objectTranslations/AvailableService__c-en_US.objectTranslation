@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Available Service</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Available Services</value>
+    </caseValues>
+    <fields>
+        <label><!-- Default --></label>
+        <name>Default__c</name>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+        <relationshipLabel><!-- Available Services --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>ServiceType__c</name>
+        <relationshipLabel><!-- Available Services --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Supply Point --></label>
+        <name>SupplyPoint__c</name>
+        <relationshipLabel><!-- Available Services --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Wholesalers --></label>
+        <name>Wholesalers__c</name>
+        <relationshipLabel><!-- Available Services --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Available Service Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

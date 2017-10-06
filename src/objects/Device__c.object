@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Device_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>NumberOfActiveSupplyPointDevice__c  = 1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DeviceReferenceHelper__c</fullName>
+        <externalId>false</externalId>
+        <formula>value(MID(Name,9,1)) + 
+value(MID(Name,8,1)) * 2 + 
+value(MID(Name,7,1)) * 5 + 
+value(MID(Name,6,1)) * 3 + 
+value(MID(Name,5,1)) * 6 + 
+value(MID(Name,4,1)) * 4 + 
+value(MID(Name,3,1)) * 8 + 
+value(MID(Name,2,1)) * 7 + 
+value(MID(Name,1,1)) * 10</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Device Reference Helper</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DeviceReference__c</fullName>
+        <externalId>false</externalId>
+        <formula>Name &amp;TEXT(  DeviceValidation__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Device Reference</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DeviceType__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Parent-child relationship with Device Type.</description>
+        <externalId>false</externalId>
+        <label>Device Type</label>
+        <referenceTo>DeviceType__c</referenceTo>
+        <relationshipLabel>Devices</relationshipLabel>
+        <relationshipName>Devices</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DeviceValidation__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(11 - ( DeviceReferenceHelper__c - (floor(DeviceReferenceHelper__c/ 11) * 11)), 
+1, 1, 
+2, 2, 
+3, 3, 
+4, 4, 
+5, 5, 
+6, 6, 
+7, 7, 
+8, 8, 
+9, 9, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Device Validation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Digit__c</fullName>
+        <description>Used to indicate the point a meter will &quot;roll over&quot;. Example number of dials = 4, reads roll over after 9999.</description>
+        <externalId>false</externalId>
+        <label>Digits</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MaximumReading__c</fullName>
+        <externalId>false</externalId>
+        <label>Maximum Reading</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NumberOfActiveSupplyPointDevice__c</fullName>
+        <description>Count the number of Active supply point device record.</description>
+        <externalId>false</externalId>
+        <label>Number Of Active Supply Point Device</label>
+        <summaryFilterItems>
+            <field>SupplyPointDevice__c.ActiveBackground__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SupplyPointDevice__c.Device__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SerialNo__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Serial No.</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Device</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>DeviceReference__c</columns>
+        <columns>SerialNo__c</columns>
+        <columns>DeviceType__c</columns>
+        <columns>Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{000000000}</displayFormat>
+        <label>Device Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Devices</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>DeviceDigitMustNotBeChanged</fullName>
+        <active>true</active>
+        <description>Once entered Device Digit should not be changed so that number of digits on Device will be consistent with the maximum digits of Readings.</description>
+        <errorConditionFormula>AND( PRIORVALUE( Digit__c ) &lt;&gt; 0 ,ISCHANGED( Digit__c ))</errorConditionFormula>
+        <errorMessage>Digit can&apos;t be updated once entered.</errorMessage>
+    </validationRules>
+</CustomObject>

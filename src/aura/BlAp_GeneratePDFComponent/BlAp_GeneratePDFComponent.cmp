@@ -1,0 +1,55 @@
+<!-- 
+/******************************************************************************
+@author    		Accenture: Patrick Dixon
+@date      		11 Sep 2017
+@description 	Component to implement pdf generation from a button
+				requires bill Id from parent component/page
+*******************************************************************************/
+ -->
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" 
+		extensible="true" access="global" 
+		controller="BlAp_GeneratePDFComponentCtrlr">
+
+	<!-- component attributes -->
+    <aura:attribute name="error" type="String" access="private" default=""/>
+	
+    <aura:attribute name="calloutInProgress" type="Boolean" access="private" default="false"/>
+    <aura:attribute name="response" type="String" access="private" default=""/>
+    
+	<aura:attribute name="attachmentId" access="private" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.initialise}"/>
+    
+	<!-- HTML markup -->
+	<c:GlAp_SpinnerComponent aura:id="spinner"/>
+
+	<div class="container">
+		<!-- errors -->
+		<aura:if isTrue="{!not(empty(v.error))}">
+			<div class="recordError">
+				<ui:message title="Error" severity="error" closable="true">
+					{!v.error}
+				</ui:message>
+			</div>
+		</aura:if>
+
+	    <aura:if isTrue="{!!empty(v.response)}">
+	    	<lightning:textarea name="response" value="{!v.response}" label="DEBUG: PDF generation response:"/>
+		</aura:if> 
+
+    	<aura:if isTrue="{!empty(v.attachmentId)}">
+			<aura:if isTrue="{!!v.calloutInProgress}">
+				<lightning:button variant="neutral" label="Generate PDF" onclick="{!c.generatePDF}" />
+		    	<aura:set attribute="else">
+	 				Please wait whilst we generate the PDF
+		    	</aura:set>
+		    </aura:if>
+			<aura:set attribute="else">
+				<lightning:button variant="neutral" label="View PDF" onclick="{!c.view }" />
+			</aura:set>
+		</aura:if>
+
+	</div>
+
+
+</aura:component>

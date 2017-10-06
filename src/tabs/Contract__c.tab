@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>“Contract” is used as a grouping entity to determine how Bill Items should be grouped together at the end of the process to create and calculate the bill amount for a Service/ a group of Services.</description>
+    <mobileReady>false</mobileReady>
+    <motif>Custom37: Bridge</motif>
+</CustomTab>

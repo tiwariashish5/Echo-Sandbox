@@ -1,0 +1,29 @@
+<!-- 
+/******************************************************************************
+@author    		Accenture: Patrick Dixon
+@date      		06 Sep 2017
+@description 	Component to render a spinner which can be shown and hidden
+				by calling the child component methods
+				
+	USAGE:	include:
+				<c:GlAp_SpinnerComponent aura:id="spinner"/>
+			in your component markup, and call:				
+				cmp.find("spinner").show();
+				cmp.find("spinner").hide();
+			from the your controller, to show or hide the spinner as appropriate
+				
+*******************************************************************************/
+ -->
+<aura:component implements="flexipage:availableForAllPageTypes" 
+		extensible="true" access="global">
+    
+	<!-- component methods -->
+    <aura:method name="show" action="{!c.show}"/>
+    <aura:method name="hide" action="{!c.hide}"/>
+
+	<!-- HTML markup -->
+	<div class="container">
+		<lightning:spinner aura:id="spinner" class="slds-hide"/>
+	</div>
+
+</aura:component>

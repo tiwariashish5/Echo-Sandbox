@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>23-08-2017 Accenture created custom setting to mute trigger, validation rule, workflow, process builder</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AccountTriggers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>23-08-2017 : Accenture: Manish : Created Field as API name of object to validate trigger needs to run or not</description>
+        <externalId>false</externalId>
+        <label>Account Triggers Disabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BillTriggers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>21 Sep 2017, P Dixon.</description>
+        <externalId>false</externalId>
+        <label>Bill Triggers Disabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ContactTriggers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Contact Triggers Disabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ReadingTriggers__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>ReadingTriggers Disabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Disable Automation</label>
+    <visibility>Public</visibility>
+</CustomObject>

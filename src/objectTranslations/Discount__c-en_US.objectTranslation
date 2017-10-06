@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Discount</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Discounts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>Contract__c</name>
+        <relationshipLabel><!-- Discounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service Item --></label>
+        <name>ServiceItem__c</name>
+        <relationshipLabel><!-- Discounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service --></label>
+        <name>Service__c</name>
+        <relationshipLabel><!-- Discounts --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

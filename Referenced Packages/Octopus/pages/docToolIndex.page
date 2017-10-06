@@ -1,0 +1,105 @@
+<apex:page controller="astrea_oct.SystemDetailsCtr" sidebar="false" readOnly="true">
+<html>
+<head>
+<c:overlay style="processing" />
+</head>
+
+<style>
+
+div.box {
+        width: 50%;
+        border: 1px solid black;
+        background: #e6fce8;
+        padding: 20px;
+        margin-left: 25%;
+        }                
+</style>
+
+<body>
+<apex:form > 
+<div Class="box">
+<div style="border:1px solid black">
+       <br/>
+       <b><center><font size="7" color="#8CB2E1" style="font-family: Georgia;font-size: 40px;">{!$Label.L_OCT_Octopus}</font><apex:image url="{!$Resource.astrea_oct__oct}" width="60" height="49"/></center></b><center><h6>{!$Label.astrea_oct__l_oct_gettoknow}
+</h6></center><br/><br/>                       
+        <div style="padding-left: 100px; padding-right: 100px;">
+            <apex:inputCheckbox value="{!isSelectAll}"> <apex:actionSupport event="onchange" action="{!selectAll}" reRender="options" status="overlayStatus"/> </apex:inputcheckbox>               
+            <span style="font-weight:bold;">{!$Label.astrea_oct__l_oct_select_all}</span><br/>
+            <apex:inputCheckbox value="{!doNotincludePackageComponents}"/><span style="font-weight:bold;">&nbsp;{!$Label.L_OCT_DoNotInclude}</span>
+            <hr/>
+            <apex:outputpanel id="options">
+            <apex:inputCheckbox value="{!r_classes}"/> {!$Label.astrea_oct__l_oct_apexclasses} <br/>
+            <apex:inputCheckbox value="{!r_apexComponents}"/> {!$Label.astrea_oct__l_oct_apex_components} <br/>
+            <apex:inputCheckbox value="{!r_approvalProcesses}"/> {!$Label.astrea_oct__l_oct_approval_processes}<br/>
+            <apex:inputCheckbox value="{!r_Apexjob}"/> {!$Label.astrea_oct__l_oct_async_apex_job_information} <br/>
+            <apex:inputCheckbox value="{!r_standardObjFields}"/> {!$Label.astrea_oct__l_oct_standard_objects_and_fields}     <br/>
+            <apex:inputCheckbox value="{!r_customObjectsAndFields}"/> {!$Label.astrea_oct__l_oct_custom_objects_and_fields} <br/>            
+            <apex:inputCheckbox value="{!r_dashboard}"/> {!$Label.astrea_oct__l_oct_dashboard_information} <br/>
+            <apex:inputCheckbox value="{!r_emailTemplate}"/> {!$Label.astrea_oct__l_oct_email_template_information} <br/>
+            <apex:inputCheckbox value="{!r_templates}"/> {!$Label.astrea_oct__l_oct_mail_merge_templates} <br/>
+            <apex:inputCheckbox value="{!r_objPermissions}"/> {!$Label.astrea_oct__l_oct_object_permission}<br/>
+            <apex:inputCheckbox value="{!r_orgInfo}"/> {!$Label.astrea_oct__l_oct_organisation} <br/>
+            <apex:inputCheckbox value="{!r_profiles}"/>{!$Label.astrea_oct__l_oct_profiles} <br/>
+            <apex:inputCheckbox value="{!r_queues}"/> {!$Label.astrea_oct__l_oct_queues}<br/>
+            <apex:outputPanel rendered="{!isRecTypeExist}"> <apex:inputCheckbox value="{!r_recordTypes}"/> {!$Label.astrea_oct__l_oct_record_types}<br/> </apex:outputPanel>          
+            <apex:inputCheckbox value="{!r_reports}"/> {!$Label.astrea_oct__l_oct_reports}<br/>
+            <apex:inputCheckbox value="{!r_staticResources}"/>{!$Label.astrea_oct__l_oct_static_resources} <br/>
+            <apex:inputCheckbox value="{!r_triggers}"/> {!$Label.astrea_oct__l_oct_triggers} <br/>
+            <apex:inputCheckbox value="{!r_roles}"/> {!$Label.astrea_oct__l_oct_role} <br/>
+            <apex:inputCheckbox value="{!r_users}" /> {!$Label.astrea_oct__l_oct_users} <br/>
+            <apex:inputcheckbox value="{!r_validationRules}"/>{!$Label.astrea_oct__l_oct_validation_rules} <br/>
+            <apex:inputCheckbox value="{!r_vfPages}"/> {!$Label.astrea_oct__l_oct_visualforce_pages} <br/>
+            <apex:inputcheckbox value="{!r_workflows}"/> {!$Label.astrea_oct__l_oct_workflow_rules} <br/>
+            <apex:inputCheckbox value="{!r_workflowFieldUpdates}"/> {!$Label.astrea_oct__l_oct_workflow_field_updates} <br/>
+            <apex:inputCheckbox value="{!r_flows}"/> {!$Label.astrea_oct__l_oct_flows} <br/>
+            <apex:inputCheckbox value="{!r_prcsbuilders}"/>{!$Label.astrea_oct__l_oct_process_builder} <br/>
+            </apex:outputpanel>       
+        <br/>
+        {!$Label.L_OCT_MaxNumber}: &nbsp;
+        <apex:selectList value="{!chosenLimit}" size="1">
+            <apex:selectOptions value="{!limitOptions}"></apex:selectOptions>
+        </apex:selectList>
+        <br/><br/><br/>
+        </div>
+        <center>
+        <apex:actionStatus id="overlayStatus" onStart="showOverlay();" onstop="hideOverlay();"></apex:actionstatus>
+        
+        <table border="0">
+        <tr>
+        <td colspan="2">
+            <center>                
+                <apex:commandButton action="{!GenerateVfPageDoc}" value="{!$Label.astrea_oct__l_oct_viewbutton}" style="width:80%"/>
+            </center>
+        </td>
+        <tr>
+        <td>&nbsp;</td><td>&nbsp;</td>
+        </tr>
+        </tr>
+        <tr><td colspan="2" style="text-align:center;">{!$Label.L_OCT_Download_As}</td></tr>
+        <tr>
+        <td>
+        <apex:commandbutton image="{!$Resource.astrea_oct__pdfDocIcon}" onclick="window.open( '/apex/docTool', '_blank')"  style="bgcolor:white;background-image:url({!URLFOR($Resource.astrea_oct__pdfDocIcon,'pdf.png')});height:40px;width:40px;border-width:0px;background-repeat:no-repeat;cursor:pointer;"/> 
+        </td>
+            <td>
+            <apex:commandbutton image="{!$Resource.astrea_oct__word}" action="{!GenerateWordDoc}" style="bgcolor:white;background-image:url({!URLFOR($Resource.astrea_oct__word,'word.png')});height:40px;width:40px;border-width:0px;background-repeat:no-repeat;cursor:pointer;"/> 
+        </td>
+        </tr>        
+        </table>
+        <br/>
+        </center>
+        <!--<span style="padding-left:33px;"> <b>Note:  </b></span> <br/> -->
+        <p style="padding-left:25px; padding-right: 25px; text-align:center;">
+        {!$Label.L_OCT_Ifyouareunable}
+         <br/><br/>
+        {!$Label.L_OCT_OctopusCan}
+        </p>
+        <br/><br/>
+     
+     </div> <!-- inner box-->
+     </div> <!--.box-->
+     <div id="overlay"></div>
+    </apex:form>
+      
+    </body>
+    </html>
+</apex:page>

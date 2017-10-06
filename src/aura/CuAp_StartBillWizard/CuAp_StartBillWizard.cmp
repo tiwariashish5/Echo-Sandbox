@@ -1,0 +1,62 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" extends="c:GlAp_LightningComponentBase">
+    <aura:attribute access="private" name="startBilling" type="boolean" default="false" />
+    <!--Wizard navigation properties -->
+    <aura:attribute access="private" name="stepNumber" type="Integer" default="1" />
+    <aura:attribute access="private" name="startStep" type="boolean" default="true" />
+    <aura:attribute access="private" name="endStep" type="boolean" default="false" />
+    
+    <aura:attribute access="private" name="wizardprop" type="object"/>
+    
+    <aura:attribute name="stageList" type="List" access="private"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="wizEvent" event="c:GlAp_WizardEvent" action="{!c.handleWizardEvent}"/>
+    
+    <div>
+        <aura:if isTrue="{!v.startBilling}">   
+            <div>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-slide-up-open slds-modal_large">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.doCancel}">
+                                <c:GlAp_Svg class="slds-button__icon slds-button__icon_large" aria-hidden="true" xlinkHref="{!$Resource.SLDS24 + '/assets/icons/utility-sprite/svg/symbols.svg#close'}" />
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Start Billing</h2>
+                        </header>
+                        <div class="slds-grid slds-grid_vertical slds-modal__content slds-p-around_medium">
+                            <!-- Page Header with progress bar -->
+                            <div class="slds-container_fluid">
+                                <c:GlAp_ProgressPath stageList="{!v.stageList}"/>
+                            </div>
+                            
+                            <!-- Wizard pages -->
+                            
+                            <aura:if isTrue="{!v.stepNumber==1}">
+                                <div class="slds-container_fluid slds-p-top_medium">                 
+                                    <c:CuAp_AddressPage wizardprop="{!v.wizardprop}" startStep="{!v.startStep}" endStep="{!v.endStep}"/>
+                                </div>
+                            </aura:if>
+                            <aura:if isTrue="{!v.stepNumber==2}">
+                                <div class="slds-container_fluid slds-p-top_medium">
+                                    <c:CuAp_LocationandOccupantsPage wizardprop="{!v.wizardprop}" startStep="{!v.startStep}" endStep="{!v.endStep}" />
+                                </div>
+                            </aura:if>
+                            <aura:if isTrue="{!v.stepNumber==3}">
+                                <div class="slds-container_fluid slds-p-top_medium">
+                                    <c:CUAp_SupplyServicePage startStep="{!v.startStep}" endStep="{!v.endStep}" locationId="{!v.locationId}" />
+                                </div>
+                            </aura:if>
+                        </div>               
+                    </div>                   
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+            <aura:set attribute="else">
+                <div>
+                    <button type="button" class="slds-button slds-button--neutral" onclick="{!c.doStartBilling}">Start Billing</button>
+                </div>  
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

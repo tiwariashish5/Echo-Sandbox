@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Service Item Type</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Service Item Types</value>
+    </caseValues>
+    <fields>
+        <label><!-- Bill Description --></label>
+        <name>BillDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Type --></label>
+        <name>DeviceType__c</name>
+        <relationshipLabel><!-- Service Item Types --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+        <relationshipLabel><!-- Service Item Types --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Eligible for an Agreed Rate --></label>
+        <name>EligibleForAnAgreedRate__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Company --></label>
+        <name>ServiceCompany__c</name>
+        <relationshipLabel><!-- Service Item Types --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service Item Family --></label>
+        <name>ServiceItemFamily__c</name>
+        <relationshipLabel><!-- Service Item Types --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>StartDate__c</name>
+    </fields>
+    <layouts>
+        <layout>Service Item Type Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Start Date must be before End Date --></errorMessage>
+        <name>StartDateMustbeBeforeEndDate</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Service_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is the high level family of a service provided to a customer under a contract (e.g. Water, Sewerage, Electricity, Gas etc.)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AvailableService__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Look up to Available Service object</description>
+        <externalId>false</externalId>
+        <label>Available Service</label>
+        <referenceTo>AvailableService__c</referenceTo>
+        <relationshipLabel>Services</relationshipLabel>
+        <relationshipName>Services</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <referenceTo>Contract__c</referenceTo>
+        <relationshipName>Services</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Device__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Look up to Device object</description>
+        <externalId>false</externalId>
+        <label>Device</label>
+        <referenceTo>Device__c</referenceTo>
+        <relationshipLabel>Services</relationshipLabel>
+        <relationshipName>Services</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reading__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Look up to Reading object</description>
+        <externalId>false</externalId>
+        <label>Reading</label>
+        <referenceTo>Reading__c</referenceTo>
+        <relationshipLabel>Services</relationshipLabel>
+        <relationshipName>Services</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ServiceEndDate__c</fullName>
+        <description>Date field, the latest End Date of a Service Item. Master-detail for Contract and Service object. Park for now</description>
+        <externalId>false</externalId>
+        <label>Service End Date</label>
+        <summarizedField>ServiceItem__c.EndDate__c</summarizedField>
+        <summaryForeignKey>ServiceItem__c.Service__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ServiceStartDate__c</fullName>
+        <description>Date field, the earliest Start Date of a Service Item. Master-detail for Contract and Service object. Park for now</description>
+        <externalId>false</externalId>
+        <label>Service Start Date</label>
+        <summarizedField>ServiceItem__c.StartDate__c</summarizedField>
+        <summaryForeignKey>ServiceItem__c.Service__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ServiceType__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Look up to Service Type object</description>
+        <externalId>false</externalId>
+        <label>Service Type</label>
+        <referenceTo>ServiceType__c</referenceTo>
+        <relationshipLabel>Services</relationshipLabel>
+        <relationshipName>Services</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SupplyPoint__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Look up to Supply Point object</description>
+        <externalId>false</externalId>
+        <label>Supply Point</label>
+        <referenceTo>SupplyPoint__c</referenceTo>
+        <relationshipLabel>Services</relationshipLabel>
+        <relationshipName>Services</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Service</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>S-{0000}</displayFormat>
+        <label>Service Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Services</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

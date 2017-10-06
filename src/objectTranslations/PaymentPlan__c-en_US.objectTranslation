@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Payment Plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Payment Plans</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract/Order --></label>
+        <name>ContractOrder__c</name>
+        <relationshipLabel><!-- Payment Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Day Of Month --></label>
+        <name>DayOfMonth__c</name>
+        <picklistValues>
+            <masterLabel>1st</masterLabel>
+            <translation><!-- 1st --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2nd</masterLabel>
+            <translation><!-- 2nd --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3rd</masterLabel>
+            <translation><!-- 3rd --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4th</masterLabel>
+            <translation><!-- 4th --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Day Of Week --></label>
+        <name>DayOfWeek__c</name>
+        <picklistValues>
+            <masterLabel>Monday</masterLabel>
+            <translation><!-- Monday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tuesday</masterLabel>
+            <translation><!-- Tuesday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wednesday</masterLabel>
+            <translation><!-- Wednesday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Instalments --></label>
+        <name>NumberOfInstalments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Frequency --></label>
+        <name>PaymentFrequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Plan Type --></label>
+        <name>PaymentPlanType__c</name>
+        <relationshipLabel><!-- Payment Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The intitial recommended amount --></help>
+        <label><!-- Plan Amount --></label>
+        <name>PlanAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>StartDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sum of the total value of instalments --></help>
+        <label><!-- Total Instalment Amount --></label>
+        <name>TotalInstalmentAmount__c</name>
+    </fields>
+    <layouts>
+        <layout>Payment Plan Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Day of Month should be blank if Payment Frequency is Weekly, Fortnightly, Yearly. --></errorMessage>
+        <name>DayOfMonthShouldBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Day of Week should be blank if Payment Frequency is Monthly or Yearly. --></errorMessage>
+        <name>DayOfWeekShouldBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End Date cannot be before Start Date. --></errorMessage>
+        <name>PaymentPlaEndDatecannotbeBeforeStartDate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End Date must be greater than equal to Start Date. --></errorMessage>
+        <name>PaymentPlanEndDateMustBeBeforeStartDate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Day of Month is required If Payment Frequency is Monthly --></errorMessage>
+        <name>RequiredDayOfMonth</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Day of Week is required If Payment Frequency is Weekly or Fortnightly. --></errorMessage>
+        <name>RequiredDayOfWeek</name>
+    </validationRules>
+</CustomObjectTranslation>

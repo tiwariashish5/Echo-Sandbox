@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Service Item Family</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Service Item Family</value>
+    </caseValues>
+    <fields>
+        <label><!-- Algorithm Type --></label>
+        <name>AlgorithmType__c</name>
+        <picklistValues>
+            <masterLabel>Measured Billing</masterLabel>
+            <translation><!-- Measured Billing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Eligible For Agreed Rate --></label>
+        <name>EligibleForAgreedRate__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posting Priority --></label>
+        <name>PostingPriority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recurrence Frequency --></label>
+        <name>RecurrenceFrequency__c</name>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yearly</masterLabel>
+            <translation><!-- Yearly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Recurring --></label>
+        <name>Recurring__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Service Item Family Description --></label>
+        <name>ServiceItemFamilyDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>ServiceType__c</name>
+        <relationshipLabel><!-- Service Item Family --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax --></label>
+        <name>Tax__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Service Item Family Layout</layout>
+        <sections>
+            <label><!-- Bill Calculation Information --></label>
+            <section>Bill Calculation Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Band Interval is mandatory if Banded is selected as YES --></errorMessage>
+        <name>MandatoryBandInterval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Recurring Frequency is mandatory if the Recurring is YES --></errorMessage>
+        <name>MandatoryRecurringFrequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start Date must be before End Date --></errorMessage>
+        <name>StartDateMustbeBeforeEndDate</name>
+    </validationRules>
+</CustomObjectTranslation>

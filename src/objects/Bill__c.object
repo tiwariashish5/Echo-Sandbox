@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Bill_Record_Page4</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>BillCalculation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>18 Sep 2017, P Dixon - lookup to bill calculation record created if this bill was calculated as part of a manual request</description>
+        <externalId>false</externalId>
+        <label>Bill Calculation</label>
+        <referenceTo>BillCalculation__c</referenceTo>
+        <relationshipLabel>Bills</relationshipLabel>
+        <relationshipName>Bills</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BillDate__c</fullName>
+        <description>This is the Date that the Bill was generated on.</description>
+        <externalId>false</externalId>
+        <label>Bill Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BilledAmount__c</fullName>
+        <description>Sum of all Bill items - calculated in Heroku</description>
+        <externalId>false</externalId>
+        <label>Billed Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContractGroup__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>linked to a contract</description>
+        <externalId>false</externalId>
+        <label>Contract Group</label>
+        <referenceTo>ContractGroup__c</referenceTo>
+        <relationshipName>BillStatementCreditNotes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContractNumber__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract Number</label>
+        <referenceTo>Contract__c</referenceTo>
+        <relationshipLabel>Bills</relationshipLabel>
+        <relationshipName>Bills</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CustomerNumber__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This will be the value that is stored against the customer autonumber (custref) may not need this as we will link with the id on the customer account.  Could be against a void property but would this still have a customer? These are only read/ write due to customer moves ...same for a few fields below</description>
+        <externalId>false</externalId>
+        <label>Account Number</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Bills</relationshipLabel>
+        <relationshipName>BillStatementCreditNotes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>HerokuPostgresId__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>20 Sep 2017, P Dixon - external id for Heroku mastered objects</description>
+        <externalId>true</externalId>
+        <label>Heroku Postgres Id</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Migrated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Migrated</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TotalDue__c</fullName>
+        <description>Billed amount +/- payments/adjustments</description>
+        <externalId>false</externalId>
+        <label>Total Due</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Bill</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Bill</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Bills</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

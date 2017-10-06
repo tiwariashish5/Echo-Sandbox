@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bill Calculation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bill Calculations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Request Date --></label>
+        <name>RequestDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Void</masterLabel>
+            <translation><!-- Void --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

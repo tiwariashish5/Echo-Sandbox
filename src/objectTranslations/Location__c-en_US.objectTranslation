@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Location</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Locations</value>
+    </caseValues>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive Date --></label>
+        <name>InactiveDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location Reference Helper --></label>
+        <name>LocationReferenceHelper__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location Reference --></label>
+        <name>LocationReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location Sub Type --></label>
+        <name>LocationSubType__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Croft</masterLabel>
+            <translation><!-- Croft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Detached</masterLabel>
+            <translation><!-- Detached --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Factory</masterLabel>
+            <translation><!-- Factory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flat</masterLabel>
+            <translation><!-- Flat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Land</masterLabel>
+            <translation><!-- Land --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Sector</masterLabel>
+            <translation><!-- Public Sector --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Semi detached</masterLabel>
+            <translation><!-- Semi detached --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Terraced</masterLabel>
+            <translation><!-- Terraced --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Location Type --></label>
+        <name>LocationType__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Domestic</masterLabel>
+            <translation><!-- Domestic --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Location Validation --></label>
+        <name>LocationValidation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Active  Primary Location Occup --></label>
+        <name>NumberOfActivePrimaryLocationOccup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Location --></label>
+        <name>ParentLocation__c</name>
+        <relationshipLabel><!-- Child Locations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Postal/ZIP Code --></label>
+        <name>PostalZIPCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- State/Province --></label>
+        <name>StateProvince__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <layouts>
+        <layout>Location Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please Enter Inactive Date when Inactive is true --></errorMessage>
+        <name>LocationInactiveDateManadatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select Location Sub Type. --></errorMessage>
+        <name>LocationSubTypeManadatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There must be only one Primary location Occupant record for a location. --></errorMessage>
+        <name>SinglePrimaryLocationOccupantRecord</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the correct format of Postal Code. --></errorMessage>
+        <name>UKPostalCodeCheck</name>
+    </validationRules>
+</CustomObjectTranslation>

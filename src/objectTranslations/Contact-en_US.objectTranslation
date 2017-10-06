@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Job Title</value>
+        </caseValues>
+        <name>title_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <help><!-- Customer Password to Identify for Consideration Scenarios. --></help>
+        <label><!-- Consideration Password --></label>
+        <name>ConsiderationPassword__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Type --></label>
+        <name>ContactType__c</name>
+        <picklistValues>
+            <masterLabel>Domestic Owner</masterLabel>
+            <translation><!-- Domestic Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Domestic Tenant</masterLabel>
+            <translation><!-- Domestic Tenant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Languages --></label>
+        <name>Languages__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level --></label>
+        <name>Level__c</name>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation><!-- Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation><!-- Secondary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tertiary</masterLabel>
+            <translation><!-- Tertiary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mail Opt Out --></label>
+        <name>MailOptOut__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Contact Method --></label>
+        <name>PreferredContactMethod__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Letter</masterLabel>
+            <translation><!-- Letter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Show On Bill --></label>
+        <name>ShowOnBill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Rate --></label>
+        <name>SocialRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stop Recursion --></label>
+        <name>Stop_Recursion__c</name>
+    </fields>
+    <layouts>
+        <layout>Contact (Marketing) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact (Sales) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact (Support) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Household Contact Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Contact Layout</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Edit Household --></label>
+        <name>EditContact</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Household Contact --></label>
+        <name>HouseholdContact</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Other Contact --></label>
+        <name>OtherContact</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Enter the First Name --></errorMessage>
+        <name>MandatoryFirstName</name>
+    </validationRules>
+</CustomObjectTranslation>

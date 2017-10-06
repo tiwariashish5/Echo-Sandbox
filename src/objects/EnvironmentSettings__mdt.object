@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>05 Sep 2017, P Dixon - Holds environment specific setup items eg Heroku endpoints</description>
+    <fields>
+        <fullName>BillingCalculationEndpoint__c</fullName>
+        <description>Endpoint for Heroku billing calculation REST service</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Billing Calculation Endpoint</label>
+        <required>true</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>PDFGenerationEndpoint__c</fullName>
+        <description>Endpoint for Heroku service that generates a bill PDF based on a pre-defined template</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>PDF Generation Endpoint</label>
+        <required>true</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>PDFTemplateUploadEndpoint__c</fullName>
+        <description>Endpoint for Heroku PDF template upload REST service</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>PDF Template Upload Endpoint</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <label>Environment Settings</label>
+    <pluralLabel>Environment Settings</pluralLabel>
+    <visibility>Protected</visibility>
+</CustomObject>

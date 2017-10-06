@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Group Items</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Group Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Group --></label>
+        <name>Group__c</name>
+        <relationshipLabel><!-- Group Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service Item --></label>
+        <name>ServiceItem__c</name>
+        <relationshipLabel><!-- Group Items --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AccAp_AccountRecordTypeHouseholdAccount</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AccAp_Account Record Type Household Account</shortDescription>
+        <value>Household Account</value>
+    </labels>
+    <labels>
+        <fullName>CuAp_AccountHomePageURL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CuAp_Account Home Page URL</shortDescription>
+        <value>/001/o</value>
+    </labels>
+    <labels>
+        <fullName>CuAp_AccountRecordTypeHouseholdAccountDevName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CuAp_Account Record Type Household Account Dev Name</shortDescription>
+        <value>HouseholdAccount</value>
+    </labels>
+    <labels>
+        <fullName>CuAp_ContactRecordTypeHouseholdAccountDevName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CuAp_Contact Record Type Household Account Dev Name</shortDescription>
+        <value>HouseholdContact</value>
+    </labels>
+    <labels>
+        <fullName>CuAp_ContactRecordTypeHouseholdContact</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CuAp_Contact Record Type Household Account</shortDescription>
+        <value>Household Contact</value>
+    </labels>
+    <labels>
+        <fullName>CuAp_LightningStateNotSuccessMessage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CuAp_Lightning State Not Success Message</shortDescription>
+        <value>Please contact your administrator</value>
+    </labels>
+    <labels>
+        <fullName>CuAp_LightningStateNotSuccessTitle</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CuAp_Lightning State Not Success Title</shortDescription>
+        <value>Error!</value>
+    </labels>
+    <labels>
+        <fullName>CuAp_LightningStateSuccess</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CuAp_Lightning State Success</shortDescription>
+        <value>SUCCESS</value>
+    </labels>
+</CustomLabels>

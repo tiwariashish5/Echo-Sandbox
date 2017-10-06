@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contract</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contracts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Reference --></label>
+        <name>AccountReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alternative Billing Address --></label>
+        <name>AlternativeBillingAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alternative Billing --></label>
+        <name>AlternativeBilling__c</name>
+        <relationshipLabel><!-- Contracts (Alternative Billing) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bill Calculation --></label>
+        <name>BillCalculation__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Address --></label>
+        <name>BillingAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Frequency --></label>
+        <name>BillingFrequency__c</name>
+        <picklistValues>
+            <masterLabel>4 weekly</masterLabel>
+            <translation><!-- 4 weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Annual</masterLabel>
+            <translation><!-- Annual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Six Monthly</masterLabel>
+            <translation><!-- Six Monthly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contract End Date --></label>
+        <name>ContractEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Group --></label>
+        <name>ContractGroup__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Start Date --></label>
+        <name>ContractStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Payment Plan Type --></label>
+        <name>CurrentPaymentPlanType__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>CustomerName__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Debt Recovery Profile --></label>
+        <name>DebtRecoveryProfile__c</name>
+        <picklistValues>
+            <masterLabel>Profile 1</masterLabel>
+            <translation><!-- Profile 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profile 2</masterLabel>
+            <translation><!-- Profile 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard HH Debt Recovery Process</masterLabel>
+            <translation><!-- Standard HH Debt Recovery Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard NHH Debt Recovery Process</masterLabel>
+            <translation><!-- Standard NHH Debt Recovery Process --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Bill Calculation Date --></label>
+        <name>LastBillCalculationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- No Forwarding Address --></label>
+        <name>NoForwardingAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>England</masterLabel>
+            <translation><!-- England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scotland</masterLabel>
+            <translation><!-- Scotland --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status_temp --></label>
+        <name>Status_temp__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive with Debt</masterLabel>
+            <translation><!-- Inactive with Debt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive(no debt)</masterLabel>
+            <translation><!-- Inactive(no debt) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive(with credit)</masterLabel>
+            <translation><!-- Inactive(with credit) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Suppressed --></label>
+        <name>Suppressed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Alternative Address --></label>
+        <name>UseAlternativeAddress__c</name>
+    </fields>
+    <layouts>
+        <layout>Contract Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Plan and Debt Recovery --></label>
+            <section>Payment Plan and Debt Recovery</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

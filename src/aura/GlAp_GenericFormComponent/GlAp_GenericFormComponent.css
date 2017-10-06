@@ -1,0 +1,53 @@
+.THIS {
+	position: relative;
+}
+.THIS .btnfooter{
+	position: relative;
+    left: 50%;
+    margin-left: -50px;
+    width: 200px;
+    height: 50px;
+}
+
+.THIS .slds-docked-form-footer.lukesTabold {
+    position: absolute;
+    background: #fff;
+    bottom: -35px;
+}
+
+.THIS .slds-docked-form-footer.lukesTab{
+    position: fixed;   
+    bottom: -20px;
+    z-index: 0;
+    width: 64%;
+    margin: 24px;
+    background: #fff;
+	box-shadow: none;
+    
+}
+
+@media only screen and (max-width: 776px) {
+    .THIS .slds-docked-form-footer.lukesTab{
+        width: 69%;
+    }
+}
+
+.THIS .btnFooterBot {
+    position: fixed;
+    bottom: 0;
+}
+
+.THIS .genericformcontainer{
+    width:100;
+    height:50px;
+    background-color: white;
+    position:relative;
+}
+
+.THIS .top{top:0}
+.THIS .middle{top:50%;/*half of the .box height*/}
+.THIS .bottom{bottom:0}
+
+.THIS .left{left:0;}
+.THIS .center{left:50%;}
+.THIS .right{right:0;}

@@ -1,0 +1,92 @@
+<aura:component access="global" controller="CuAp_AddressPageController">
+    <aura:attribute access="public" name="startStep" type="boolean" default="true" />
+    <aura:attribute access="public" name="endStep" type="boolean" default="false" />
+    <aura:attribute access="public" name="wizardprop" type="object"/>
+    
+    <aura:attribute access="private" name="locationsFound" type="boolean" default="false" />
+    <aura:attribute access="private" name="searchLocation" type="Location__c" default="{ sobjectType: 'Location__c' }"/>
+    
+    <aura:attribute name="fieldList" type="List" access="private"/>
+    <aura:attribute name="recordList" type="List" access="private"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="wizEvent" event="c:GlAp_WizardEvent" action="{!c.handleWizardEvent}"/>
+    <aura:handler name="rowEvent" event="c:GlAp_GenericListRowSelectEvent" action="{!c.handleRowSelectEvent}"/>
+    
+    <div class="slds-grid slds-grid_vertical slds-modal__content slds-p-around_medium">
+        <div class="slds-container_fluid">
+            <div class="slds-container_fluid">
+                <button type="button" class="slds-button slds-button--neutral" onclick="{!c.doSearch}">Search</button>
+            </div> 
+            <div class="slds-form slds-form_compound slds-p-top_medium">
+                <fieldset class="slds-form-element">
+                    <legend class="slds-form-element__label slds-text-title_caps">Address</legend>
+                    <div class="slds-form-element__group">
+                        <div class="slds-form-element__row">
+                            <div class="slds-form-element slds-size_1-of-1">
+                                <c:GlAp_GenericField aura:id="Street__c" 
+                                                     object="{!v.searchLocation}" 
+                                                     objectName="Location__c" 
+                                                     fieldType="text" 
+                                                     fieldName="Street__c" 
+                                                     editMode="true" 
+                                                     isEditable="true" 
+                                                     picklistValues="" 
+                                                     label="Street" 
+                                                     />
+                            </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                            <div class="slds-form-element slds-size_1-of-2">
+                                <c:GlAp_GenericField aura:id="City__c" 
+                                                     object="{!v.searchLocation}" 
+                                                     objectName="Location__c" 
+                                                     fieldType="text" 
+                                                     fieldName="City__c" 
+                                                     editMode="true" 
+                                                     isEditable="true" 
+                                                     picklistValues="" 
+                                                     label="City" 
+                                                     />
+                            </div>
+                            <div class="slds-form-element slds-size_1-of-2">
+                                <c:GlAp_GenericField aura:id="StateProvince__c " 
+                                                     object="{!v.searchLocation}" 
+                                                     objectName="Location__c" 
+                                                     fieldType="text" 
+                                                     fieldName="StateProvince__c " 
+                                                     editMode="true" 
+                                                     isEditable="true" 
+                                                     picklistValues="" 
+                                                     label="State" 
+                                                     />
+                            </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                            <div class="slds-form-element slds-size_1-of-2">
+                                <c:GlAp_GenericField aura:id="PostalZIPCode__c" 
+                                                     object="{!v.searchLocation}" 
+                                                     objectName="Location__c" 
+                                                     fieldType="text" 
+                                                     fieldName="PostalZIPCode__c" 
+                                                     editMode="true" 
+                                                     isEditable="true" 
+                                                     picklistValues="" 
+                                                     label="Post Code" 
+                                                     />                               
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.locationsFound}"> 
+            <div class="slds-container_fluid">
+                <c:GlAp_GenericTable fieldList="{!v.fieldList}" recordList="{!v.recordList}" showSelect="true"/>                             
+            </div>
+        </aura:if>
+        <div class="slds-container_fluid">
+            <c:GlAp_WizardButtons startStep="{!v.startStep}" endStep="{!v.endStep}"/>
+        </div>
+    </div>
+</aura:component>

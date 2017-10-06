@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Charge Basis</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Charge Bases</value>
+    </caseValues>
+    <fields>
+        <label><!-- Available Service --></label>
+        <name>AvailableService__c</name>
+        <relationshipLabel><!-- Charge Bases --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

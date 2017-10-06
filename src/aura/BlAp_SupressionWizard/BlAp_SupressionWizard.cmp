@@ -1,0 +1,36 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" controller="BlAp_SupressionWizardController" extends="c:GlAp_LightningComponentBase">
+    <aura:attribute name="fieldList" type="List" access="private"/>
+    <aura:attribute name="recordList" type="List" access="private"/>
+    <aura:attribute access="private" name="manageSupressions" type="boolean" default="false" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div>
+        <aura:if isTrue="{!v.manageSupressions}">   
+            <div>          
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-slide-up-open slds-modal_large">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.doCancel}">
+                                <c:GlAp_Svg class="slds-button__icon slds-button__icon_large" aria-hidden="true" xlinkHref="{!$Resource.SLDS24 + '/assets/icons/utility-sprite/svg/symbols.svg#close'}" />
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Manage Supressions</h2>
+                        </header>
+                        
+                        <c:GlAp_GenericTable fieldList="{!v.fieldList}" recordList="{!v.recordList}" showSelect="true"/>
+
+                        <footer class="slds-modal__footer">
+                            <button type="button" class="slds-button slds-button--neutral" onclick="{!c.doCancel}">Cancel</button>
+                            <button type="button" class="slds-button slds-button--brand" onclick="{!c.doSave}">Save</button>
+                        </footer>       
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+            <aura:set attribute="else">
+                <div>
+                    <button type="button" class="slds-button slds-button--neutral" onclick="{!c.doManageSupression}">Manage Supressions</button>
+                </div>  
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>
